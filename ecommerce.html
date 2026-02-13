@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore - Modern E-Commerce</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #fff;
+  color: #667eea;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s;
+  animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+}
+
+.products {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 2rem;
+  color: #667eea;
+  font-weight: 700;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #667eea;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background: #5568d3;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #0a0a0a;
+  color: #666;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>🛍️ TechStore</h1>
+    <p>Your Ultimate Tech Shopping Destination</p>
+    <a href="#products" class="cta-btn">Shop Now</a>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h2>Featured Products</h2>
+  
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-icon">💻</div>
+      <h3>MacBook Pro</h3>
+      <p>M3 Chip, 16GB RAM, 512GB SSD</p>
+      <div class="price">$1,999</div>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">📱</div>
+      <h3>iPhone 15 Pro</h3>
+      <p>256GB, Titanium Blue</p>
+      <div class="price">$1,199</div>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">🎧</div>
+      <h3>AirPods Max</h3>
+      <p>Space Gray, Active Noise Cancellation</p>
+      <div class="price">$549</div>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">⌚</div>
+      <h3>Apple Watch Ultra</h3>
+      <p>GPS + Cellular, 49mm</p>
+      <div class="price">$799</div>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">🖥️</div>
+      <h3>Studio Display</h3>
+      <p>27-inch 5K Retina</p>
+      <div class="price">$1,599</div>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">⌨️</div>
+      <h3>Magic Keyboard</h3>
+      <p>Touch ID, Numeric Keypad</p>
+      <div class="price">$199</div>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 TechStore • Built by Brilliantsyah El-Huda</p>
+</footer>
+
+</body>
+</html>

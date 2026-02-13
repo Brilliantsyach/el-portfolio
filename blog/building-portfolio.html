@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Panduan lengkap membuat portfolio website dengan animasi halus, efek partikel, dan prinsip desain UI modern">
+<title>Membangun Portfolio Animasi dari Nol | EL-Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-main: #02000a;
+  --bg-dark: #070014;
+  --accent-main: #f472b6;
+  --accent-soft: #a5b4fc;
+  --text-soft: #c7c7d1;
+  --font-primary: 'Poppins', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-main);
+  color: #fff;
+  line-height: 1.8;
+}
+
+.article-header {
+  padding: 120px 10% 60px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  text-align: center;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  transition: gap 0.3s;
+}
+
+.back-link:hover {
+  gap: 15px;
+}
+
+.article-category {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.article-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.article-hero-img {
+  max-width: 1200px;
+  margin: -50px auto 0;
+  padding: 0 5%;
+}
+
+.article-hero-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 5%;
+}
+
+.article-content h2 {
+  font-size: 2rem;
+  margin: 60px 0 20px;
+  font-family: var(--font-display);
+  background: linear-gradient(90deg, var(--accent-main), var(--accent-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  margin: 40px 0 15px;
+  color: var(--accent-soft);
+}
+
+.article-content p {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 20px 0 20px 30px;
+}
+
+.article-content li {
+  margin-bottom: 12px;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+.article-content strong {
+  color: #fff;
+}
+
+.code-block {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--accent-main);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.tip-box {
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.1), rgba(165, 180, 252, 0.1));
+  border-left: 4px solid var(--accent-main);
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.tip-box h4 {
+  color: var(--accent-main);
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+}
+
+.article-image {
+  margin: 40px 0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.article-image img {
+  width: 100%;
+  display: block;
+}
+
+.article-cta {
+  text-align: center;
+  padding: 60px 5%;
+  background: linear-gradient(135deg, var(--accent-main), var(--accent-soft));
+  margin-top: 80px;
+  border-radius: 20px;
+}
+
+.article-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.article-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #000;
+  opacity: 0.8;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .article-header h1 {
+    font-size: 2rem;
+  }
+  
+  .article-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .article-meta {
+    gap: 15px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="article-header">
+  <a href="../index.html#blog" class="back-link">← Kembali ke Blog</a>
+  <div class="article-category">Tutorial</div>
+  <h1>Membangun Portfolio Animasi dari Nol</h1>
+  <p style="font-size:1.2rem;opacity:0.9;max-width:700px;margin:20px auto">
+    Panduan lengkap untuk membuat website portfolio menakjubkan dengan animasi halus, 
+    efek partikel, dan prinsip desain UI modern.
+  </p>
+  
+  <div class="article-meta">
+    <span>📅 10 Feb 2026</span>
+    <span>⏱️ 12 menit baca</span>
+    <span>👤 Brilliantsyah El-Huda</span>
+  </div>
+</header>
+
+<!-- Hero Image -->
+<div class="article-hero-img">
+  <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&h=600&fit=crop" alt="Building Portfolio">
+</div>
+
+<!-- Content -->
+<div class="article-content">
+
+  <h2>📋 Pengantar</h2>
+  <p>
+    Di era digital ini, memiliki portfolio online yang menarik bukan lagi optional—tapi <strong>wajib</strong>. 
+    Portfolio adalah kartu nama digital kamu yang akan dilihat pertama kali oleh calon client atau recruiter. 
+    Dalam tutorial ini, saya akan guide kamu step-by-step membuat portfolio yang tidak hanya terlihat profesional, 
+    tapi juga memukau dengan animasi yang smooth dan modern.
+  </p>
+
+  <div class="tip-box">
+    <h4>💡 Yang Akan Kamu Pelajari:</h4>
+    <ul>
+      <li>Struktur HTML semantic untuk portfolio</li>
+      <li>CSS modern dengan custom properties</li>
+      <li>JavaScript untuk animasi interaktif</li>
+      <li>Particle effects dengan Canvas API</li>
+      <li>Custom cursor dan scroll animations</li>
+      <li>Best practices untuk performance</li>
+    </ul>
+  </div>
+
+  <h2>🏗️ Persiapan & Setup</h2>
+  
+  <h3>1. Tools yang Dibutuhkan</h3>
+  <p>Sebelum mulai coding, pastikan kamu punya:</p>
+  <ul>
+    <li><strong>Text Editor:</strong> VS Code (recommended), Sublime Text, atau Atom</li>
+    <li><strong>Browser:</strong> Chrome atau Firefox (untuk DevTools)</li>
+    <li><strong>Live Server:</strong> Extension VS Code untuk live preview</li>
+    <li><strong>Git:</strong> Untuk version control (optional tapi recommended)</li>
+  </ul>
+
+  <h3>2. Struktur Folder</h3>
+  <p>Buat struktur folder yang rapi dari awal untuk maintainability:</p>
+  
+  <div class="code-block">
+    <pre>
+portfolio/
+├── index.html
+├── css/
+│   ├── variables.css    # Theme colors & settings
+│   ├── reset.css        # CSS reset
+│   ├── components.css   # Reusable components
+│   ├── animations.css   # Keyframe animations
+│   └── main.css         # Main styles
+├── js/
+│   ├── particles.js     # Particle background
+│   ├── cursor.js        # Custom cursor
+│   ├── animations.js    # Scroll animations
+│   └── main.js          # Main logic
+└── assets/
+    └── images/          # Images & icons
+    </pre>
+  </div>
+
+  <h2>🎨 Step 1: HTML Structure</h2>
+  
+  <p>Mulai dengan HTML semantic yang clean:</p>
+
+  <div class="code-block">
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Portfolio Saya&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/main.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Navigation --&gt;
+  &lt;nav&gt;
+    &lt;a href="#home"&gt;Home&lt;/a&gt;
+    &lt;a href="#about"&gt;About&lt;/a&gt;
+    &lt;a href="#projects"&gt;Projects&lt;/a&gt;
+    &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;!-- Hero Section --&gt;
+  &lt;section id="home" class="hero"&gt;
+    &lt;h1&gt;Nama Kamu&lt;/h1&gt;
+    &lt;p&gt;Web Developer & Designer&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;script src="js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </div>
+
+  <div class="tip-box">
+    <h4>💡 Pro Tip:</h4>
+    <p>Gunakan semantic HTML tags seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, 
+    <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> untuk SEO yang lebih baik!</p>
+  </div>
+
+  <h2>🎨 Step 2: CSS Custom Properties</h2>
+  
+  <p>Buat theme yang konsisten dengan CSS variables:</p>
+
+  <div class="code-block">
+    <pre>
+/* css/variables.css */
+:root {
+  /* Colors */
+  --bg-main: #02000a;
+  --accent-main: #f472b6;
+  --accent-soft: #a5b4fc;
+  --text-primary: #ffffff;
+  --text-soft: #c7c7d1;
+  
+  /* Typography */
+  --font-display: 'Orbitron', sans-serif;
+  --font-primary: 'Poppins', sans-serif;
+  
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+    </pre>
+  </div>
+
+  <p><strong>Kenapa pakai CSS variables?</strong></p>
+  <ul>
+    <li>Mudah maintain & update theme colors</li>
+    <li>Bisa di-override untuk dark/light mode</li>
+    <li>DRY (Don't Repeat Yourself) principle</li>
+    <li>JavaScript bisa akses & manipulasi</li>
+  </ul>
+
+  <h2>✨ Step 3: Particle Background</h2>
+  
+  <p>Buat background interaktif dengan Canvas API:</p>
+
+  <div class="code-block">
+    <pre>
+// js/particles.js
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+class Particle {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = Math.random() * 3 + 1;
+    this.speedX = (Math.random() - 0.5) * 0.5;
+    this.speedY = (Math.random() - 0.5) * 0.5;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    
+    // Wrap around screen
+    if (this.x > canvas.width) this.x = 0;
+    if (this.x < 0) this.x = canvas.width;
+    if (this.y > canvas.height) this.y = 0;
+    if (this.y < 0) this.y = canvas.height;
+  }
+
+  draw() {
+    ctx.fillStyle = '#f472b6';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+// Create particles
+const particles = [];
+for (let i = 0; i < 100; i++) {
+  particles.push(new Particle(
+    Math.random() * canvas.width,
+    Math.random() * canvas.height
+  ));
+}
+
+// Animation loop
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  particles.forEach(particle => {
+    particle.update();
+    particle.draw();
+  });
+  
+  requestAnimationFrame(animate);
+}
+
+animate();
+    </pre>
+  </div>
+
+  <h2>🖱️ Step 4: Custom Cursor</h2>
+  
+  <p>Tambahkan custom cursor untuk sentuhan interaktif:</p>
+
+  <div class="code-block">
+    <pre>
+/* CSS */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f472b6;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  background: rgba(244, 114, 182, 0.2);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.3s ease;
+}
+
+/* JavaScript */
+const cursor = document.querySelector('.cursor');
+const follower = document.querySelector('.cursor-follower');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  
+  setTimeout(() => {
+    follower.style.left = e.clientX + 'px';
+    follower.style.top = e.clientY + 'px';
+  }, 100);
+});
+    </pre>
+  </div>
+
+  <h2>📜 Step 5: Scroll Animations</h2>
+  
+  <p>Gunakan Intersection Observer untuk performance optimal:</p>
+
+  <div class="code-block">
+    <pre>
+// Reveal elements on scroll
+const revealElements = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target); // Stop observing
+    }
+  });
+}, {
+  threshold: 0.2 // Trigger when 20% visible
+});
+
+revealElements.forEach(element => {
+  observer.observe(element);
+});
+    </pre>
+  </div>
+
+  <div class="code-block">
+    <pre>
+/* CSS Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+    </pre>
+  </div>
+
+  <h2>⚡ Step 6: Performance Optimization</h2>
+  
+  <h3>1. CSS Optimization</h3>
+  <ul>
+    <li><strong>Use transform instead of position:</strong> Hardware accelerated</li>
+    <li><strong>Avoid layout thrashing:</strong> Batch DOM reads & writes</li>
+    <li><strong>will-change property:</strong> Hint browser untuk optimization</li>
+  </ul>
+
+  <div class="code-block">
+    <pre>
+/* ❌ Bad - triggers layout */
+.element {
+  left: 100px;
+  top: 50px;
+}
+
+/* ✅ Good - GPU accelerated */
+.element {
+  transform: translate(100px, 50px);
+  will-change: transform;
+}
+    </pre>
+  </div>
+
+  <h3>2. JavaScript Optimization</h3>
+  <ul>
+    <li>Debounce scroll events</li>
+    <li>Use requestAnimationFrame for animations</li>
+    <li>Lazy load images</li>
+    <li>Minimize DOM manipulation</li>
+  </ul>
+
+  <h2>🎯 Step 7: Responsive Design</h2>
+  
+  <p>Mobile-first approach dengan breakpoints yang smart:</p>
+
+  <div class="code-block">
+    <pre>
+/* Mobile First */
+.container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+    </pre>
+  </div>
+
+  <h2>🚀 Step 8: Deployment</h2>
+  
+  <p>Deploy portfolio kamu dengan mudah:</p>
+
+  <h3>Netlify (Recommended)</h3>
+  <ol>
+    <li>Drag & drop folder ke netlify.com</li>
+    <li>Get free .netlify.app domain</li>
+    <li>Auto-deploy on git push</li>
+  </ol>
+
+  <h3>GitHub Pages</h3>
+  <ol>
+    <li>Push code ke GitHub repository</li>
+    <li>Settings → Pages → Enable</li>
+    <li>Live at username.github.io/repo-name</li>
+  </ol>
+
+  <h2>📝 Kesimpulan</h2>
+  
+  <p>
+    Membuat portfolio yang menarik memang butuh effort, tapi hasilnya worth it! 
+    Dengan mengikuti tutorial ini, kamu sekarang punya foundation yang solid untuk 
+    membuat portfolio yang tidak hanya cantik, tapi juga performant dan professional.
+  </p>
+
+  <div class="tip-box">
+    <h4>🎯 Next Steps:</h4>
+    <ul>
+      <li>Add more projects ke portfolio kamu</li>
+      <li>Optimize untuk SEO (meta tags, sitemap)</li>
+      <li>Setup Google Analytics</li>
+      <li>Get testimonials dari client</li>
+      <li>Share di social media!</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section class="article-cta">
+  <h2>Butuh Portfolio Custom?</h2>
+  <p>Saya bisa bantu kamu membuat portfolio yang stand out!</p>
+  <a href="../index.html#contact" class="cta-btn">Hubungi Saya</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 EL-Portfolio • <a href="../index.html" style="color:#f472b6">Kembali ke Home</a></p>
+</footer>
+
+</body>
+</html>

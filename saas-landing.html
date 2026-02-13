@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CloudSync - SaaS Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#fff;color:#1a1a1a}
+.navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:20px 5%;display:flex;justify-content:space-between;align-items:center;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,0.05)}
+.logo{font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,#f093fb,#f5576c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-btn{padding:12px 30px;background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff;border:none;border-radius:50px;font-weight:600;cursor:pointer}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 20px 50px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);color:#fff}
+.hero h1{font-size:3.5rem;margin-bottom:20px}
+.hero p{font-size:1.3rem;margin-bottom:30px;opacity:0.95}
+.hero-btn{display:inline-block;padding:18px 50px;background:#fff;color:#f5576c;border-radius:50px;text-decoration:none;font-weight:700;margin:10px;transition:transform 0.3s}
+.hero-btn:hover{transform:translateY(-5px)}
+.features{padding:100px 5%;max-width:1200px;margin:0 auto}
+.features h2{text-align:center;font-size:2.5rem;margin-bottom:60px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.feature-card{text-align:center;padding:40px;border-radius:20px;background:#f9f9f9;transition:transform 0.3s}
+.feature-card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,0.1)}
+.feature-icon{font-size:3rem;margin-bottom:20px}
+.feature-card h3{font-size:1.5rem;margin-bottom:15px}
+.pricing{padding:100px 5%;background:#f093fb;color:#fff;text-align:center}
+.pricing h2{font-size:2.5rem;margin-bottom:60px}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1000px;margin:0 auto}
+.price-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border-radius:20px;padding:40px;border:2px solid rgba(255,255,255,0.2)}
+.price-card.popular{background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.5)}
+.price-card h3{font-size:1.5rem;margin-bottom:20px}
+.price{font-size:3rem;font-weight:700;margin:20px 0}
+.price-btn{display:block;width:100%;padding:15px;background:#fff;color:#f093fb;border:none;border-radius:50px;font-weight:600;margin-top:30px;cursor:pointer}
+footer{text-align:center;padding:40px;background:#1a1a1a;color:#999}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">☁️ CloudSync</div>
+  <button class="nav-btn">Get Started</button>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Sync Your Work, Anywhere</h1>
+    <p>Powerful cloud collaboration platform for modern teams</p>
+    <a href="#" class="hero-btn">Start Free Trial</a>
+    <a href="#" class="hero-btn" style="background:transparent;border:2px solid #fff;color:#fff">Watch Demo</a>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Why Choose CloudSync?</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Lightning Fast</h3>
+      <p>Upload and sync files in milliseconds with our global CDN network</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Bank-Level Security</h3>
+      <p>End-to-end encryption keeps your data safe and private</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤝</div>
+      <h3>Team Collaboration</h3>
+      <p>Work together in real-time with your entire team</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <h3>Cross-Platform</h3>
+      <p>Access your files from any device, anywhere</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Smart Organization</h3>
+      <p>AI-powered file management and search</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Analytics Dashboard</h3>
+      <p>Track team productivity and file insights</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <h2>Simple, Transparent Pricing</h2>
+  <div class="price-grid">
+    <div class="price-card">
+      <h3>Starter</h3>
+      <div class="price">$9<small>/mo</small></div>
+      <p>✓ 100 GB Storage</p>
+      <p>✓ 5 Team Members</p>
+      <p>✓ Basic Support</p>
+      <button class="price-btn">Choose Plan</button>
+    </div>
+    <div class="price-card popular">
+      <h3>Professional</h3>
+      <div class="price">$29<small>/mo</small></div>
+      <p>✓ 1 TB Storage</p>
+      <p>✓ Unlimited Members</p>
+      <p>✓ Priority Support</p>
+      <p>✓ Advanced Analytics</p>
+      <button class="price-btn">Choose Plan</button>
+    </div>
+    <div class="price-card">
+      <h3>Enterprise</h3>
+      <div class="price">Custom</div>
+      <p>✓ Unlimited Storage</p>
+      <p>✓ Dedicated Support</p>
+      <p>✓ Custom Integration</p>
+      <p>✓ SLA Guarantee</p>
+      <button class="price-btn">Contact Sales</button>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 CloudSync • Built by Brilliantsyah El-Huda</footer>
+
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pelajari strategi efektif untuk menentukan harga jasa web development, memahami nilai diri, dan bernegosiasi dengan client">
+<title>Cara Menentukan Harga Jasa Web Development | EL-Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-main: #02000a;
+  --bg-dark: #070014;
+  --accent-main: #f472b6;
+  --accent-soft: #a5b4fc;
+  --text-soft: #c7c7d1;
+  --font-primary: 'Poppins', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-main);
+  color: #fff;
+  line-height: 1.8;
+}
+
+.article-header {
+  padding: 120px 10% 60px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  text-align: center;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  transition: gap 0.3s;
+}
+
+.back-link:hover {
+  gap: 15px;
+}
+
+.article-category {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.article-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.article-hero-img {
+  max-width: 1200px;
+  margin: -50px auto 0;
+  padding: 0 5%;
+}
+
+.article-hero-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 5%;
+}
+
+.article-content h2 {
+  font-size: 2rem;
+  margin: 60px 0 20px;
+  font-family: var(--font-display);
+  background: linear-gradient(90deg, var(--accent-main), var(--accent-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  margin: 40px 0 15px;
+  color: var(--accent-soft);
+}
+
+.article-content p {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 20px 0 20px 30px;
+}
+
+.article-content li {
+  margin-bottom: 12px;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+.article-content strong {
+  color: #fff;
+}
+
+.price-table {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.price-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-table th {
+  background: linear-gradient(135deg, var(--accent-main), var(--accent-soft));
+  color: #000;
+  padding: 15px;
+  text-align: left;
+  font-family: var(--font-display);
+}
+
+.price-table td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tip-box {
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.1), rgba(165, 180, 252, 0.1));
+  border-left: 4px solid var(--accent-main);
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.tip-box h4 {
+  color: var(--accent-main);
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+}
+
+.warning-box {
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 4px solid #ef4444;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.warning-box h4 {
+  color: #ef4444;
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+}
+
+.formula-box {
+  background: rgba(103, 232, 249, 0.1);
+  border: 2px solid #67e8f9;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.formula-box .formula {
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  color: #67e8f9;
+  margin: 20px 0;
+}
+
+.article-cta {
+  text-align: center;
+  padding: 60px 5%;
+  background: linear-gradient(135deg, var(--accent-main), var(--accent-soft));
+  margin-top: 80px;
+  border-radius: 20px;
+}
+
+.article-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.article-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #000;
+  opacity: 0.8;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .article-header h1 {
+    font-size: 2rem;
+  }
+  
+  .article-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .price-table {
+    overflow-x: auto;
+  }
+  
+  .price-table table {
+    min-width: 500px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="article-header">
+  <a href="../index.html#blog" class="back-link">← Kembali ke Blog</a>
+  <div class="article-category">Bisnis</div>
+  <h1>Cara Menentukan Harga Jasa Web Development Freelance</h1>
+  <p style="font-size:1.2rem;opacity:0.9;max-width:700px;margin:20px auto">
+    Pelajari strategi efektif untuk menentukan harga jasa, memahami nilai diri, 
+    dan bernegosiasi dengan client secara percaya diri.
+  </p>
+  
+  <div class="article-meta">
+    <span>📅 8 Feb 2026</span>
+    <span>⏱️ 6 menit baca</span>
+    <span>👤 Brilliantsyah El-Huda</span>
+  </div>
+</header>
+
+<!-- Hero Image -->
+<div class="article-hero-img">
+  <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=600&fit=crop" alt="Freelance Pricing">
+</div>
+
+<!-- Content -->
+<div class="article-content">
+
+  <h2>💰 Kenapa Pricing itu Penting?</h2>
+  <p>
+    Salah satu challenge terbesar freelancer pemula adalah <strong>menentukan harga</strong>. 
+    Terlalu murah? Kamu undervalue diri sendiri dan ga sustainable. Terlalu mahal? 
+    Client kabur ke kompetitor. Finding that sweet spot adalah skill yang harus dikuasai 
+    kalau mau sukses sebagai freelance web developer.
+  </p>
+
+  <div class="warning-box">
+    <h4>⚠️ Common Mistakes:</h4>
+    <ul>
+      <li>Pricing based on "feeling" tanpa kalkulasi</li>
+      <li>Terlalu cepat kasih diskon saat negotiation</li>
+      <li>Ga include revisi & scope creep dalam pricing</li>
+      <li>Compare dengan developer di negara dengan cost of living berbeda</li>
+    </ul>
+  </div>
+
+  <h2>📊 3 Metode Pricing Utama</h2>
+
+  <h3>1. Hourly Rate (Per Jam)</h3>
+  <p>
+    Cocok untuk: Maintenance, ongoing projects, atau kalau scope belum jelas.
+  </p>
+
+  <div class="formula-box">
+    <h4>Formula Hourly Rate:</h4>
+    <div class="formula">
+      (Target Income / Jam Kerja per Bulan) × 1.5
+    </div>
+    <p style="font-size:0.9rem;color:var(--text-soft);margin-top:10px">
+      *1.5 untuk cover non-billable time, tax, & saving
+    </p>
+  </div>
+
+  <p><strong>Contoh Kalkulasi:</strong></p>
+  <ul>
+    <li>Target income: Rp 10 juta/bulan</li>
+    <li>Jam kerja: 160 jam/bulan (8 jam × 20 hari)</li>
+    <li>Rate dasar: Rp 10.000.000 / 160 = Rp 62.500/jam</li>
+    <li><strong>Hourly rate: Rp 62.500 × 1.5 = Rp 93.750/jam (~Rp 100K/jam)</strong></li>
+  </ul>
+
+  <div class="tip-box">
+    <h4>💡 Pro Tip:</h4>
+    <p>
+      Jangan quote hourly rate ke client untuk project-based work. Mereka ga peduli 
+      berapa jam kamu kerjain—mereka peduli <strong>value</strong> yang mereka dapat!
+    </p>
+  </div>
+
+  <h3>2. Project-Based Pricing (Per Proyek)</h3>
+  <p>
+    <strong>Ini yang paling recommended!</strong> Client lebih suka fixed price karena 
+    predictable, dan kamu bisa profit lebih kalau efisien.
+  </p>
+
+  <div class="price-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Jenis Project</th>
+          <th>Estimasi Waktu</th>
+          <th>Range Harga (Indonesia)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Landing Page</td>
+          <td>3-5 hari</td>
+          <td>Rp 300K - Rp 1 juta</td>
+        </tr>
+        <tr>
+          <td>Company Profile (5-7 pages)</td>
+          <td>7-14 hari</td>
+          <td>Rp 500K - Rp 3 juta</td>
+        </tr>
+        <tr>
+          <td>E-commerce (basic)</td>
+          <td>14-30 hari</td>
+          <td>Rp 3 juta - Rp 10 juta</td>
+        </tr>
+        <tr>
+          <td>Custom Web App</td>
+          <td>30-60 hari</td>
+          <td>Rp 10 juta - Rp 50 juta+</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Cara hitung project-based:</strong></p>
+  <ol>
+    <li>Estimasi berapa jam project ini dikerjain</li>
+    <li>Kalikan dengan hourly rate kamu</li>
+    <li>Add buffer 20-30% untuk unexpected issues</li>
+    <li>Consider complexity & value to client</li>
+  </ol>
+
+  <h3>3. Value-Based Pricing (Berdasarkan Value)</h3>
+  <p>
+    <strong>Highest profit potential!</strong> Pricing based on value yang client dapat, 
+    bukan based on waktu kamu.
+  </p>
+
+  <p><strong>Contoh:</strong></p>
+  <ul>
+    <li>Client: Toko online yang sekarang offline, target revenue Rp 50 juta/bulan</li>
+    <li>Kamu buat e-commerce yang bisa generate Rp 20 juta/bulan</li>
+    <li>Value untuk client: Rp 20 juta × 12 bulan = Rp 240 juta/tahun</li>
+    <li><strong>Reasonable charge: 5-10% dari value = Rp 12-24 juta</strong></li>
+  </ul>
+
+  <div class="tip-box">
+    <h4>🎯 When to Use Value-Based:</h4>
+    <ul>
+      <li>Client punya clear revenue goal</li>
+      <li>Project directly impact bisnis mereka</li>
+      <li>Kamu punya track record & case studies</li>
+      <li>Client sophisticated & understand ROI</li>
+    </ul>
+  </div>
+
+  <h2>🎯 Factors yang Influence Pricing</h2>
+
+  <h3>1. Experience & Portfolio</h3>
+  <ul>
+    <li><strong>Beginner (0-1 tahun):</strong> Rp 50K-100K/jam</li>
+    <li><strong>Intermediate (1-3 tahun):</strong> Rp 100K-200K/jam</li>
+    <li><strong>Advanced (3-5 tahun):</strong> Rp 200K-400K/jam</li>
+    <li><strong>Expert (5+ tahun):</strong> Rp 400K+/jam</li>
+  </ul>
+
+  <h3>2. Project Complexity</h3>
+  <ul>
+    <li>Simple landing page vs complex web app</li>
+    <li>Berapa banyak integrations (payment, CMS, API)</li>
+    <li>Custom features vs template-based</li>
+    <li>Level of customization required</li>
+  </ul>
+
+  <h3>3. Timeline & Urgency</h3>
+  <ul>
+    <li>Normal timeline: Standard rate</li>
+    <li>Rush job (<1 week): +30-50% premium</li>
+    <li>Tight deadline requiring overtime: +50-100%</li>
+  </ul>
+
+  <h3>4. Scope of Work</h3>
+  <div class="tip-box">
+    <h4>✅ Always Include in Quote:</h4>
+    <ul>
+      <li>Number of pages/sections</li>
+      <li>Number of revisions (biasanya 2-3x)</li>
+      <li>Deliverables (source code, assets, documentation)</li>
+      <li>Timeline & milestones</li>
+      <li>Support period (1-3 bulan free support)</li>
+    </ul>
+  </div>
+
+  <h2>💬 Negotiation Tips</h2>
+
+  <h3>1. Never Quote First</h3>
+  <p>
+    Tanya dulu: <em>"Berapa budget yang tersedia untuk project ini?"</em> 
+    Kalau mereka insist kamu quote first, kasih range instead of exact number.
+  </p>
+
+  <h3>2. Justify Your Price</h3>
+  <p>Don't just say "Rp 5 juta". Explain WHY:</p>
+  <ul>
+    <li>Include breakdown (design, development, testing)</li>
+    <li>Highlight value mereka dapat</li>
+    <li>Show case studies/testimonials</li>
+    <li>Mention what's included vs excluded</li>
+  </ul>
+
+  <h3>3. When to Say No</h3>
+  <div class="warning-box">
+    <h4>🚩 Red Flags:</h4>
+    <ul>
+      <li>Client minta "test project" gratis yang terlalu kompleks</li>
+      <li>Expect unlimited revisions</li>
+      <li>Ga jelas scope tapi minta fixed price rendah</li>
+      <li>Payment terms mencurigakan (full payment after project)</li>
+    </ul>
+  </div>
+
+  <h2>📝 Contoh Pricing Structure</h2>
+
+  <div class="price-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Package</th>
+          <th>What's Included</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Starter</strong></td>
+          <td>
+            • 1 Landing Page<br>
+            • Responsive Design<br>
+            • Basic SEO<br>
+            • Contact Form<br>
+            • 2 Revisions
+          </td>
+          <td><strong>Rp 300K</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Professional</strong></td>
+          <td>
+            • 5-7 Pages<br>
+            • Custom Design<br>
+            • SEO Optimized<br>
+            • CMS Integration<br>
+            • 3 Revisions<br>
+            • 1 Month Support
+          </td>
+          <td><strong>Rp 500K</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Premium</strong></td>
+          <td>
+            • Unlimited Pages<br>
+            • Advanced Features<br>
+            • Custom CMS<br>
+            • Payment Integration<br>
+            • 5 Revisions<br>
+            • 3 Months Support
+          </td>
+          <td><strong>Rp 1M+</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>✅ Action Steps</h2>
+
+  <ol>
+    <li><strong>Calculate your minimum hourly rate</strong> (based on living expenses)</li>
+    <li><strong>Research market rates</strong> di area/niche kamu</li>
+    <li><strong>Create 3 pricing tiers</strong> (Starter, Pro, Premium)</li>
+    <li><strong>Build case studies</strong> untuk justify higher prices</li>
+    <li><strong>Track your time</strong> on projects untuk improve estimates</li>
+  </ol>
+
+  <div class="tip-box">
+    <h4>💡 Final Advice:</h4>
+    <p>
+      Pricing adalah <strong>skill</strong> yang improve over time. Jangan takut adjust 
+      rates kamu seiring bertambahnya experience dan value yang kamu deliver. 
+      Dan remember: kalau semua client instantly say yes ke price kamu, 
+      <strong>you're probably charging too low!</strong>
+    </p>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section class="article-cta">
+  <h2>Butuh Website Profesional?</h2>
+  <p>Mari diskusikan project kamu dengan pricing yang fair & transparent!</p>
+  <a href="../index.html#contact" class="cta-btn">Konsultasi Gratis</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 EL-Portfolio • <a href="../index.html" style="color:#f472b6">Kembali ke Home</a></p>
+</footer>
+
+</body>
+</html>

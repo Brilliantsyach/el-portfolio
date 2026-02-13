@@ -1,0 +1,55 @@
+:root {
+  /* Dark Theme */
+  --bg-main: #02000a;
+  --bg-dark: #070014;
+  --bg-card: #ffffff0a;
+  --bg-glass: linear-gradient(135deg, #ffffff18, #ffffff05);
+  
+  --accent-main: #f472b6;
+  --accent-soft: #a5b4fc;
+  --accent-glow: #67e8f9;
+  
+  --text-primary: #ffffff;
+  --text-soft: #c7c7d1;
+  --text-muted: #777;
+  
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+  
+  /* Spacing */
+  --section-padding: 140px 10%;
+  --section-padding-mobile: 120px 7%;
+  
+  /* Border Radius */
+  --radius-sm: 15px;
+  --radius-md: 25px;
+  --radius-lg: 50px;
+  
+  /* Transitions */
+  --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px var(--accent-main);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-main: #f5f5f7;
+  --bg-dark: #ffffff;
+  --bg-card: #ffffff;
+  --bg-glass: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+  
+  --text-primary: #1d1d1f;
+  --text-soft: #424245;
+  --text-muted: #86868b;
+  
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
+}

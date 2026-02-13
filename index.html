@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Brilliantsyah - Web Developer specializing in futuristic anime-inspired websites. Professional portfolio & freelance services.">
+<meta name="keywords" content="web developer, UI designer, anime website, futuristic design, portfolio, brilliantsyah">
+<meta name="author" content="Brilliantsyah El-Huda">
+<meta property="og:title" content="EL-Portfolio - Futuristic Web Design">
+<meta property="og:description" content="Premium anime-inspired websites by Brilliantsyah">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.imgur.com/YOUR-ACTUAL-IMAGE.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+<title>EL-Portfolio - Brilliantsyah El-Huda</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/advanced.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body data-theme="dark">
+
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+<canvas id="cursor-trail"></canvas>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="loader-logo">
+      <span class="glitch" data-text="EL-PORTFOLIO">EL-PORTFOLIO</span>
+    </div>
+    <div class="loader-bar"><span></span></div>
+    <div class="loader-percentage">0%</div>
+    <div class="loader-status" data-i18n="loader.status">Memuat Aset...</div>
+  </div>
+</div>
+
+<!-- Progress Bar -->
+<div class="progress" id="progress"></div>
+
+<!-- Background -->
+<div class="bg"></div>
+<div class="noise"></div>
+<canvas id="particles"></canvas>
+
+<!-- Social Media Float -->
+<div class="social-float">
+  <a href="https://github.com/Brilliantsyach" target="_blank" rel="noopener noreferrer" class="social-btn" data-tooltip="GitHub" aria-label="Visit GitHub profile">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+    </svg>
+  </a>
+  <a href="https://www.linkedin.com/in/brilliantsyah-el" target="_blank" rel="noopener noreferrer" class="social-btn" data-tooltip="LinkedIn" aria-label="Visit LinkedIn profile">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+    </svg>
+  </a>
+  <a href="https://www.instagram.com/Bryaant_el" target="_blank" rel="noopener noreferrer" class="social-btn" data-tooltip="Instagram" aria-label="Visit Instagram profile">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+  </a>
+  <a href="mailto:brilliantsyah.webdev@gmail.com" class="social-btn" data-tooltip="Email" aria-label="Send email">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+  </a>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+  <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 2V4M12 20V22M4 12H2M22 12H20M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M19.07 19.07L17.66 17.66M6.34 6.34L4.93 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2"/>
+  </svg>
+</button>
+
+<!-- Sound Toggle
+<button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
+  <svg class="sound-on" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+  </svg>
+  <svg class="sound-off" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <line x1="23" y1="9" x2="17" y2="15"/>
+    <line x1="17" y1="9" x2="23" y2="15"/>
+  </svg>
+</button> -->
+
+<!-- ============================================= -->
+<!-- MAIN CONTENT START -->
+<!-- ============================================= -->
+<div class="page">
+
+<!-- Header -->
+<header>
+  <h1 class="logo-text">EL-PORTFOLIO</h1>
+  
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">🇮🇩 ID</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧 EN</button>
+  </div>
+  
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<!-- Navigation -->
+<nav id="menu">
+  <a href="#home" class="nav-link" data-i18n="nav.home">Beranda</a>
+  <a href="#about" class="nav-link" data-i18n="nav.about">Tentang</a>
+  <a href="#services" class="nav-link" data-i18n="nav.services">Layanan</a>
+  <a href="#skills" class="nav-link" data-i18n="nav.skills">Keahlian</a>
+  <a href="#projects" class="nav-link" data-i18n="nav.projects">Proyek</a>
+  <a href="#blog" class="nav-link" data-i18n="nav.blog">Artikel</a>
+  <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Testimoni</a>
+  <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+  <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontak</a>
+</nav>
+
+<!-- ============================================= -->
+<!-- HERO SECTION -->
+<!-- ============================================= -->
+<section id="home" class="hero">
+  <div class="hero-content fade-in-up">
+    <div class="status-badge">
+      <span data-i18n="hero.status">Tersedia untuk Freelance</span>
+    </div>
+    
+    <h2 class="hero-title">
+      <span class="line">Brilliantsyah</span>
+      <span class="line">El-Huda F G.</span>
+    </h2>
+    
+    <p class="hero-subtitle" data-i18n="hero.subtitle">
+      Saya mendesain website futuristik bergaya anime yang membuat brand terlihat
+      <b>premium</b> dan <b>berkesan</b>.
+    </p>
+
+    <div class="hire-actions">
+      <a class="hire-btn email tilt" target="_blank" rel="noopener noreferrer"
+         href="https://mail.google.com/mail/?view=cm&fs=1&to=brilliantsyah.webdev@gmail.com&su=Project%20Inquiry%20-%20Let's%20Collaborate!&body=Hi%20Brilliantsyah,%0D%0A%0D%0AI'm%20interested%20in%20working%20with%20you.%0D%0A%0D%0AProject%20Type:%20[Website/E-commerce/Landing%20Page/Other]%0D%0ABudget:%20[Your%20budget]%0D%0ATimeline:%20[Expected%20deadline]%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]">
+        <span data-i18n="hero.cta.email">Mari Diskusi Proyek</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <a class="hire-btn wa tilt" target="_blank" rel="noopener noreferrer"
+         href="https://wa.me/6285727794642?text=Hi%20Brilliantsyah!%20👋%0A%0ASaya%20tertarik%20dengan%20jasa%20web%20development%20kamu.">
+        <span data-i18n="hero.cta.wa">Chat WhatsApp</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Stats Counter -->
+    <div class="stats">
+      <div class="stat-item tilt">
+        <span class="stat-number" data-target="5">0</span>
+        <span class="stat-label" data-i18n="hero.stats.projects">Proyek</span>
+      </div>
+      <div class="stat-item tilt">
+        <span class="stat-number" data-target="100">0</span>
+        <span class="stat-label" data-i18n="hero.stats.satisfaction">% Kepuasan</span>
+      </div>
+      <div class="stat-item tilt">
+        <span class="stat-number" data-target="24">0</span>
+        <span class="stat-label" data-i18n="hero.stats.support">Jam Support</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <span data-i18n="hero.scroll">Gulir ke Bawah</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- ABOUT SECTION -->
+<!-- ============================================= -->
+<section id="about">
+  <h2 class="section-title reveal" data-i18n="about.title">TENTANG</h2>
+  <div class="glass reveal tilt">
+    <div class="about-content">
+
+      <!-- Avatar -->
+      <div class="about-avatar">
+        <div class="avatar-wrapper">
+          <img src="assets/images/profile.jpg" 
+               alt="Brilliantsyah El-Huda - Web Developer" 
+               loading="lazy" width="300" height="300">
+          <div class="avatar-ring"></div>
+          <div class="avatar-status">
+            <span class="status-dot"></span>
+            <span data-i18n="about.available">Tersedia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Text -->
+      <div class="about-text">
+        <h3 data-i18n="about.heading">Mengubah Ide Menjadi Karya Digital</h3>
+        <p data-i18n="about.desc1">
+          Portfolio futuristik dengan rasa premium untuk client profesional. 
+          Saya mengkhususkan diri dalam menciptakan pengalaman web yang tidak hanya indah dipandang, 
+          tetapi juga fungsional dan berkesan.
+        </p>
+        <p data-i18n="about.desc2">
+          Dengan perpaduan antara estetika anime modern dan prinsip-prinsip design thinking, 
+          setiap proyek yang saya kerjakan dirancang untuk memberikan dampak maksimal 
+          terhadap kehadiran brand dan keterlibatan pengguna.
+        </p>
+        
+        <!-- Download CV -->
+        <div class="cv-download-section">
+          <a href="assets/cv.pdf" class="download-cv" download>
+            <div class="cv-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <div class="cv-text">
+              <span class="cv-label">Resume</span>
+              <span class="cv-title" data-i18n="about.cv.download">Unduh CV</span>
+            </div>
+          </a>
+          <div class="cv-preview">
+            <span data-i18n="about.cv.info">📄 PDF • 75.9 KB • diperbarui Jan 2026</span>
+          </div>
+        </div>
+      </div><!-- /.about-text -->
+
+    </div><!-- /.about-content -->
+
+    <!-- Features -->
+    <div class="about-features">
+      <div class="feature-item">
+        <div class="feature-icon">🎨</div>
+        <div class="feature-text">
+          <h4 data-i18n="about.feat1.title">Desain Kreatif</h4>
+          <p data-i18n="about.feat1.desc">Estetika unik & berkesan</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-text">
+          <h4 data-i18n="about.feat2.title">Performa Cepat</h4>
+          <p data-i18n="about.feat2.desc">Dioptimalkan untuk kecepatan & SEO</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📱</div>
+        <div class="feature-text">
+          <h4 data-i18n="about.feat3.title">Responsif</h4>
+          <p data-i18n="about.feat3.desc">Sempurna di semua perangkat</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <h3 class="timeline-title" data-i18n="about.journey">Perjalanan Saya</h3>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">2024</span>
+          <h4 data-i18n="about.tl1.title">Mulai Belajar Web Development</h4>
+          <p data-i18n="about.tl1.desc">Belajar HTML, CSS, dan JavaScript secara otodidak</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">2025</span>
+          <h4 data-i18n="about.tl2.title">Proyek Client Pertama</h4>
+          <p data-i18n="about.tl2.desc">Brilliant Custom Motor - Website company profile pertama</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-content">
+          <span class="timeline-year">2026</span>
+          <h4 data-i18n="about.tl3.title">Freelance Web Developer</h4>
+          <p data-i18n="about.tl3.desc">Terbuka untuk proyek & membangun website premium</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.glass -->
+</section>
+
+<!-- ============================================= -->
+<!-- WHY SECTION -->
+<!-- ============================================= -->
+<section id="why">
+  <h2 class="section-title reveal" data-i18n="why.title">MENGAPA MEMILIH SAYA</h2>
+  <div class="why-grid">
+    <div class="why-card reveal tilt">
+      <div class="why-icon">🎯</div>
+      <h3 data-i18n="why.card1.title">Desain Bertujuan</h3>
+      <p data-i18n="why.card1.desc">Setiap elemen memiliki fungsi sambil mempertahankan keunggulan estetika</p>
+    </div>
+    <div class="why-card reveal tilt">
+      <div class="why-icon">🔍</div>
+      <h3 data-i18n="why.card2.title">Berorientasi Detail</h3>
+      <p data-i18n="why.card2.desc">Presisi pixel-perfect di setiap aspek desain</p>
+    </div>
+    <div class="why-card reveal tilt">
+      <div class="why-icon">🚀</div>
+      <h3 data-i18n="why.card3.title">Siap Masa Depan</h3>
+      <p data-i18n="why.card3.desc">Tech stack modern dan arsitektur yang dapat diskalakan</p>
+    </div>
+    <div class="why-card reveal tilt">
+      <div class="why-icon">💬</div>
+      <h3 data-i18n="why.card4.title">Komunikasi Jelas</h3>
+      <p data-i18n="why.card4.desc">Update rutin dan alur kerja yang transparan</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- SERVICES & PRICING SECTION -->
+<!-- ============================================= -->
+<section id="services">
+  <h2 class="section-title reveal" data-i18n="services.title">LAYANAN & HARGA</h2>
+  
+  <div class="pricing-grid">
+    <!-- Starter -->
+    <div class="pricing-card reveal tilt">
+      <div class="pricing-badge">Starter</div>
+      <div class="pricing-icon">🌱</div>
+      <h3>Landing Page</h3>
+      <div class="pricing-price">
+        <span class="price-currency">Rp</span>
+        <span class="price-amount">300K</span>
+        <span class="price-period">/ project</span>
+      </div>
+      <ul class="pricing-features">
+        <li class="included" data-i18n="services.s1.f1">✓ 1 Halaman Responsive</li>
+        <li class="included" data-i18n="services.s1.f2">✓ Desain Modern</li>
+        <li class="included" data-i18n="services.s1.f3">✓ Animasi Dasar</li>
+        <li class="included" data-i18n="services.s1.f4">✓ Form Kontak</li>
+        <li class="included" data-i18n="services.s1.f5">✓ SEO Dasar</li>
+        <li class="excluded" data-i18n="services.s1.f6">✗ Custom CMS</li>
+        <li class="excluded" data-i18n="services.s1.f7">✗ Multi-bahasa</li>
+      </ul>
+      <a href="#contact" class="pricing-btn" data-i18n="services.btn.start">Mulai</a>
+      <span class="pricing-delivery" data-i18n="services.s1.delivery">⏱ Pengerjaan: 3-5 hari</span>
+    </div>
+    
+    <!-- Professional -->
+    <div class="pricing-card featured reveal tilt">
+      <div class="pricing-popular" data-i18n="services.popular">🔥 PALING POPULER</div>
+      <div class="pricing-badge">Professional</div>
+      <div class="pricing-icon">⚡</div>
+      <h3>Company Profile</h3>
+      <div class="pricing-price">
+        <span class="price-currency">Rp</span>
+        <span class="price-amount">500K</span>
+        <span class="price-period">/ project</span>
+      </div>
+      <ul class="pricing-features">
+        <li class="included" data-i18n="services.s2.f1">✓ 5-7 Halaman</li>
+        <li class="included" data-i18n="services.s2.f2">✓ Animasi Premium</li>
+        <li class="included" data-i18n="services.s2.f3">✓ Responsif Semua Perangkat</li>
+        <li class="included" data-i18n="services.s2.f4">✓ SEO Optimal</li>
+        <li class="included" data-i18n="services.s2.f5">✓ Form Kontak + Maps</li>
+        <li class="included" data-i18n="services.s2.f6">✓ Integrasi Media Sosial</li>
+        <li class="included" data-i18n="services.s2.f7">✓ 1 Bulan Support Gratis</li>
+      </ul>
+      <a href="#contact" class="pricing-btn primary" data-i18n="services.btn.choose">Pilih Paket</a>
+      <span class="pricing-delivery" data-i18n="services.s2.delivery">⏱ Pengerjaan: 7-14 hari</span>
+    </div>
+    
+    <!-- Premium -->
+    <div class="pricing-card reveal tilt">
+      <div class="pricing-badge">Premium</div>
+      <div class="pricing-icon">🚀</div>
+      <h3>Custom Website</h3>
+      <div class="pricing-price">
+        <span class="price-currency">Rp</span>
+        <span class="price-amount">1M+</span>
+        <span class="price-period">/ project</span>
+      </div>
+      <ul class="pricing-features">
+        <li class="included" data-i18n="services.s3.f1">✓ Halaman Unlimited</li>
+        <li class="included" data-i18n="services.s3.f2">✓ Animasi Lanjutan</li>
+        <li class="included" data-i18n="services.s3.f3">✓ Fitur Custom</li>
+        <li class="included" data-i18n="services.s3.f4">✓ Integrasi CMS</li>
+        <li class="included" data-i18n="services.s3.f5">✓ Multi-bahasa</li>
+        <li class="included" data-i18n="services.s3.f6">✓ Dashboard Analitik</li>
+        <li class="included" data-i18n="services.s3.f7">✓ 3 Bulan Support Gratis</li>
+      </ul>
+      <a href="#contact" class="pricing-btn" data-i18n="services.btn.contact">Hubungi Saya</a>
+      <span class="pricing-delivery" data-i18n="services.s3.delivery">⏱ Pengerjaan: 14-30 hari</span>
+    </div>
+  </div>
+  
+  <p class="pricing-note reveal" data-i18n="services.note">
+    💡 Harga bisa disesuaikan dengan kebutuhan proyek. 
+    <a href="#contact">Konsultasi gratis!</a>
+  </p>
+</section>
+
+<!-- ============================================= -->
+<!-- PROCESS SECTION -->
+<!-- ============================================= -->
+<section id="process">
+  <h2 class="section-title reveal" data-i18n="process.title">CARA KERJA SAYA</h2>
+  
+  <div class="process-timeline">
+    <div class="process-step reveal">
+      <div class="step-number">01</div>
+      <div class="step-content">
+        <div class="step-icon">💬</div>
+        <h3 data-i18n="process.s1.title">Diskusi & Brief</h3>
+        <p data-i18n="process.s1.desc">Diskusi kebutuhan proyek, target audience, dan goals yang ingin dicapai.</p>
+        <span class="step-duration" data-i18n="process.s1.day">Hari 1-2</span>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-number">02</div>
+      <div class="step-content">
+        <div class="step-icon">🎨</div>
+        <h3 data-i18n="process.s2.title">Desain & Wireframe</h3>
+        <p data-i18n="process.s2.desc">Membuat mockup dan wireframe untuk persetujuan sebelum development.</p>
+        <span class="step-duration" data-i18n="process.s2.day">Hari 3-5</span>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-number">03</div>
+      <div class="step-content">
+        <div class="step-icon">⚡</div>
+        <h3 data-i18n="process.s3.title">Pengembangan</h3>
+        <p data-i18n="process.s3.desc">Coding website responsif dengan kode bersih dan best practices.</p>
+        <span class="step-duration" data-i18n="process.s3.day">Hari 5-12</span>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-number">04</div>
+      <div class="step-content">
+        <div class="step-icon">🔍</div>
+        <h3 data-i18n="process.s4.title">Review & Revisi</h3>
+        <p data-i18n="process.s4.desc">Testing menyeluruh dan revisi sesuai feedback client.</p>
+        <span class="step-duration" data-i18n="process.s4.day">Hari 12-14</span>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-number">05</div>
+      <div class="step-content">
+        <div class="step-icon">🚀</div>
+        <h3 data-i18n="process.s5.title">Peluncuran & Support</h3>
+        <p data-i18n="process.s5.desc">Deploy website dan memberikan support gratis setelah peluncuran.</p>
+        <span class="step-duration" data-i18n="process.s5.day">Hari 14+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- SKILLS SECTION -->
+<!-- ============================================= -->
+<section id="skills">
+  <h2 class="section-title reveal" data-i18n="skills.title">KEAHLIAN</h2>
+  <div class="skills-container">
+    <div class="skill-bar reveal">
+      <div class="skill-info">
+        <span>HTML & CSS</span>
+        <span class="skill-percentage">95%</span>
+      </div>
+      <div class="skill-progress">
+        <div class="skill-progress-fill" data-progress="95"></div>
+      </div>
+    </div>
+    <div class="skill-bar reveal">
+      <div class="skill-info">
+        <span>JavaScript</span>
+        <span class="skill-percentage">85%</span>
+      </div>
+      <div class="skill-progress">
+        <div class="skill-progress-fill" data-progress="85"></div>
+      </div>
+    </div>
+    <div class="skill-bar reveal">
+      <div class="skill-info">
+        <span>UI/UX Design</span>
+        <span class="skill-percentage">90%</span>
+      </div>
+      <div class="skill-progress">
+        <div class="skill-progress-fill" data-progress="90"></div>
+      </div>
+    </div>
+    <div class="skill-bar reveal">
+      <div class="skill-info">
+        <span>Web Animation</span>
+        <span class="skill-percentage">88%</span>
+      </div>
+      <div class="skill-progress">
+        <div class="skill-progress-fill" data-progress="88"></div>
+      </div>
+    </div>
+    <div class="skill-bar reveal">
+      <div class="skill-info">
+        <span>Responsive Design</span>
+        <span class="skill-percentage">92%</span>
+      </div>
+      <div class="skill-progress">
+        <div class="skill-progress-fill" data-progress="92"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech Stack (INSIDE skills section now) -->
+  <div class="tech-stack reveal">
+    <h3 class="tech-title">Tech Stack</h3>
+    <div class="tech-grid">
+      <div class="tech-item tilt" data-tooltip="HTML5">
+        <div class="tech-icon">
+          <svg viewBox="0 0 128 128" width="48" height="48">
+            <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/>
+            <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/>
+            <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/>
+            <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/>
+          </svg>
+        </div>
+        <span>HTML5</span>
+      </div>
+      <div class="tech-item tilt" data-tooltip="CSS3">
+        <div class="tech-icon">
+          <svg viewBox="0 0 128 128" width="48" height="48">
+            <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543z"/>
+            <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16z"/>
+            <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V24.208h34.682l-.332 3.711-3.4 38.114h-30.95z"/>
+            <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018z"/>
+            <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881z"/>
+            <path fill="#EBEBEB" d="M64.048 24.208v13.058H30.64l-.277-3.108-.63-7.045-.331-2.905zm-.047 27.221v13.157H46.119l-.277-3.108-.631-7.044-.33-2.905h19.12z"/>
+          </svg>
+        </div>
+        <span>CSS3</span>
+      </div>
+      <div class="tech-item tilt" data-tooltip="JavaScript">
+        <div class="tech-icon">
+          <svg viewBox="0 0 128 128" width="48" height="48">
+            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/>
+            <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.573-6.168 3.226-8.298 2.497-2.178-1.128-3.272-2.632-4.58-4.867-.369-.644-.636-1.131-.666-1.131l-9.468 5.796c1.559 3.297 3.879 6.202 6.932 8.057 4.452 2.692 10.459 3.545 16.731 2.069 4.074-1.236 7.595-3.718 9.469-7.69 2.602-5.156 2.043-11.441 2.016-18.457.083-10.16.031-20.32.031-30.52l.064-.175z"/>
+          </svg>
+        </div>
+        <span>JavaScript</span>
+      </div>
+      <div class="tech-item tilt" data-tooltip="Git">
+        <div class="tech-icon" style="font-size:2.5rem;">🔀</div>
+        <span>Git</span>
+      </div>
+      <div class="tech-item tilt" data-tooltip="Figma">
+        <div class="tech-icon" style="font-size:2.5rem;">🎨</div>
+        <span>Figma</span>
+      </div>
+      <div class="tech-item tilt" data-tooltip="VS Code">
+        <div class="tech-icon" style="font-size:2.5rem;">💻</div>
+        <span>VS Code</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- PROJECTS SECTION -->
+<!-- ============================================= -->
+<section id="projects">
+  <h2 class="section-title reveal" data-i18n="projects.title">PROYEK</h2>
+
+  <div class="projects">
+    
+    <!-- PROJECT 1: Brilliant Custom Motor -->
+    <div class="project reveal tilt">
+      <div class="project-image" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
+        <div class="project-overlay">
+          <a href="https://brilliantsyach.github.io/Brilliant-Custom-Motor/" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Live →
+          </a>
+        </div>
+      </div>
+      <div class="project-content">
+        <span class="project-label">Website Development</span>
+        <h3>Brilliant Custom Motor</h3>
+        <p data-i18n="projects.p1.desc">
+          Website company profile untuk bengkel custom motor, 
+          dibangun untuk menampilkan layanan, galeri, dan informasi kontak dengan animasi halus.
+        </p>
+        <div class="project-tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Animations</span>
+        </div>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-icon">👤</span>
+            <span><b>Client:</b> <span data-i18n="projects.p1.client">Bengkel Lokal</span></span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">💼</span>
+            <span><b>Role:</b> UI/UX & Frontend Dev</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">📅</span>
+            <span><b data-i18n="projects.year">Tahun:</b> 2025</span>
+          </div>
+        </div>
+        <a href="case-study-bcm.html" class="case-study-link" data-i18n="projects.caseStudy">Baca Studi Kasus Lengkap →</a>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: E-Commerce -->
+    <div class="project reveal tilt">
+      <div class="project-image" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);">
+        <div class="project-overlay">
+          <a href="ecommerce.html" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Live Demo →
+          </a>
+        </div>
+      </div>
+      <div class="project-content">
+        <span class="project-label">Full Stack Development</span>
+        <h3>Modern E-Commerce Store</h3>
+        <p data-i18n="projects.p2.desc">
+          Platform belanja online lengkap dengan katalog produk, 
+          keranjang belanja, integrasi pembayaran, dan dashboard admin untuk manajemen inventori.
+        </p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Stripe API</span>
+        </div>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-icon">⚡</span>
+            <span><b data-i18n="projects.features">Fitur:</b> <span data-i18n="projects.p2.feat">Inventori real-time</span></span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">🔒</span>
+            <span><b data-i18n="projects.security">Keamanan:</b> JWT Auth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: SaaS Landing -->
+    <div class="project reveal tilt">
+      <div class="project-image" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);">
+        <div class="project-overlay">
+          <a href="saas-landing.html" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Live Demo →
+          </a>
+        </div>
+      </div>
+      <div class="project-content">
+        <span class="project-label">UI/UX Design</span>
+        <h3>SaaS Product Landing</h3>
+        <p data-i18n="projects.p3.desc">
+          Landing page dengan konversi tinggi untuk produk SaaS dengan demo interaktif, 
+          tabel harga, testimoni, dan integrasi newsletter.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Framer Motion</span>
+          <span class="tag">TypeScript</span>
+        </div>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-icon">📈</span>
+            <span><b data-i18n="projects.result">Hasil:</b> <span data-i18n="projects.p3.result">Peningkatan konversi 45%</span></span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">🎨</span>
+            <span><b data-i18n="projects.style">Gaya:</b> Minimalist Modern</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div><!-- /.projects -->
+</section>
+
+<!-- ============================================= -->
+<!-- BLOG SECTION -->
+<!-- ============================================= -->
+<section id="blog">
+  <h2 class="section-title reveal" data-i18n="blog.title">ARTIKEL & WAWASAN</h2>
+  
+  <div class="blog-grid">
+    
+    <article class="blog-card reveal tilt">
+      <div class="blog-image" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
+        <div class="blog-category" data-i18n="blog.cat.design">Desain Web</div>
+      </div>
+      <div class="blog-content">
+        <div class="blog-meta">
+          <span class="blog-date">📅 12 Feb 2026</span>
+          <span class="blog-read">⏱️ 8 <span data-i18n="blog.minRead">menit baca</span></span>
+        </div>
+        <h3 data-i18n="blog.a1.title">5 Tren Desain Web yang Mendominasi 2026</h3>
+        <p data-i18n="blog.a1.desc">Temukan tren desain terdepan yang membentuk ulang lanskap digital tahun ini, dari antarmuka bertenaga AI hingga pengalaman 3D imersif.</p>
+        <a href="blog/web-design-trends-2026.html" class="blog-link">
+          <span data-i18n="blog.readMore">Baca Selengkapnya</span> →
+        </a>
+      </div>
+    </article>
+
+    <article class="blog-card reveal tilt">
+      <div class="blog-image" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);">
+        <div class="blog-category">Tutorial</div>
+      </div>
+      <div class="blog-content">
+        <div class="blog-meta">
+          <span class="blog-date">📅 10 Feb 2026</span>
+          <span class="blog-read">⏱️ 12 <span data-i18n="blog.minRead">menit baca</span></span>
+        </div>
+        <h3 data-i18n="blog.a2.title">Membangun Portfolio Animasi dari Nol</h3>
+        <p data-i18n="blog.a2.desc">Panduan lengkap untuk membuat website portfolio menakjubkan dengan animasi halus, efek partikel, dan prinsip desain UI modern.</p>
+        <a href="blog/building-portfolio.html" class="blog-link">
+          <span data-i18n="blog.readMore">Baca Selengkapnya</span> →
+        </a>
+      </div>
+    </article>
+
+    <article class="blog-card reveal tilt">
+      <div class="blog-image" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);">
+        <div class="blog-category" data-i18n="blog.cat.business">Bisnis</div>
+      </div>
+      <div class="blog-content">
+        <div class="blog-meta">
+          <span class="blog-date">📅 8 Feb 2026</span>
+          <span class="blog-read">⏱️ 6 <span data-i18n="blog.minRead">menit baca</span></span>
+        </div>
+        <h3 data-i18n="blog.a3.title">Cara Menentukan Harga Jasa Web Development Freelance</h3>
+        <p data-i18n="blog.a3.desc">Pelajari strategi efektif untuk menentukan harga jasa, memahami nilai diri, dan bernegosiasi dengan client secara percaya diri.</p>
+        <a href="blog/freelance-pricing.html" class="blog-link">
+          <span data-i18n="blog.readMore">Baca Selengkapnya</span> →
+        </a>
+      </div>
+    </article>
+
+  </div><!-- /.blog-grid -->
+</section>
+
+<!-- ============================================= -->
+<!-- TESTIMONIALS SECTION -->
+<!-- ============================================= -->
+<section id="testimonials">
+  <h2 class="section-title reveal" data-i18n="testimonials.title">ULASAN CLIENT</h2>
+  
+  <div class="testimonials-container reveal">
+    <div class="testimonial-slider">
+      <div class="testimonial-track">
+        
+        <div class="testimonial-card tilt active">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text" data-i18n="testimonials.t1.text">
+            "Kerja sama dengan Brilliantsyah sangat memuaskan! Website kami jadi terlihat modern dan profesional. 
+            Response time cepat dan hasil melebihi ekspektasi!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">BC</div>
+            <div class="author-info">
+              <h4>Brilliant Custom Motor</h4>
+              <span data-i18n="testimonials.t1.role">Pemilik Bengkel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card tilt">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text" data-i18n="testimonials.t2.text">
+            "Desain yang unik dan eye-catching! Skill coding-nya solid, komunikasi lancar, 
+            dan selalu terbuka untuk feedback. Sangat direkomendasikan!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JD</div>
+            <div class="author-info">
+              <h4>John Doe</h4>
+              <span data-i18n="testimonials.t2.role">Pendiri Startup</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card tilt">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text" data-i18n="testimonials.t3.text">
+            "Portfolio yang dibuat benar-benar menonjol! Animasi halus, loading cepat, 
+            dan responsif di semua perangkat. Sangat worth it!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SM</div>
+            <div class="author-info">
+              <h4>Sarah Michelle</h4>
+              <span data-i18n="testimonials.t3.role">Kreator Konten</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="testimonial-nav">
+      <button class="testimonial-btn prev" aria-label="Previous testimonial">‹</button>
+      <button class="testimonial-btn next" aria-label="Next testimonial">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- FAQ SECTION -->
+<!-- ============================================= -->
+<section id="faq">
+  <h2 class="section-title reveal">FAQ</h2>
+  
+  <div class="faq-container">
+    <div class="faq-item reveal">
+      <button class="faq-question">
+        <span data-i18n="faq.q1">Berapa lama proses pengerjaan website?</span>
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="faq-answer">
+        <p data-i18n="faq.a1">Tergantung kompleksitas proyek. Landing page biasanya 3-5 hari, 
+        company profile 7-14 hari, dan custom website 14-30 hari.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <button class="faq-question">
+        <span data-i18n="faq.q2">Apakah termasuk hosting dan domain?</span>
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="faq-answer">
+        <p data-i18n="faq.a2">Harga yang tertera belum termasuk hosting dan domain. 
+        Tapi saya bisa bantu setup dan rekomendasikan provider terbaik sesuai budget kamu.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <button class="faq-question">
+        <span data-i18n="faq.q3">Bisa request revisi berapa kali?</span>
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="faq-answer">
+        <p data-i18n="faq.a3">Setiap paket include 2-3x revisi minor gratis. 
+        Untuk revisi major (perubahan layout/struktur), akan dikenakan biaya tambahan 
+        yang dibicarakan sebelumnya.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <button class="faq-question">
+        <span data-i18n="faq.q4">Metode pembayaran apa yang diterima?</span>
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="faq-answer">
+        <p data-i18n="faq.a4">Transfer bank (BCA/BRI/Mandiri), DANA, GoPay, dan OVO. 
+        Sistem pembayaran: 50% DP di awal, 50% setelah proyek selesai.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <button class="faq-question">
+        <span data-i18n="faq.q5">Apakah website-nya SEO friendly?</span>
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="faq-answer">
+        <p data-i18n="faq.a5">Ya! Semua website yang saya buat sudah dioptimasi untuk SEO 
+        termasuk meta tags, semantic HTML, loading cepat, mobile responsif, 
+        dan structured data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- CONTACT SECTION -->
+<!-- ============================================= -->
+<section id="contact">
+  <h2 class="section-title reveal" data-i18n="contact.title">MARI BEKERJA SAMA</h2>
+  
+  <div class="contact-container">
+    <div class="glass contact-box reveal tilt">
+      <p class="contact-text" data-i18n="contact.desc">
+        Punya ide proyek atau ingin website custom?<br>
+        Saya terbuka untuk pekerjaan freelance dan kolaborasi.
+      </p>
+      
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/xpqjqbjz" method="POST">
+        <div class="form-group">
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder=" ">
+          <label for="name" data-i18n="contact.form.name">Nama Kamu</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder=" ">
+          <label for="email" data-i18n="contact.form.email">Email Kamu</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder=" ">
+          <label for="phone" data-i18n="contact.form.phone">Nomor Telepon (Opsional)</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+          <label for="message" data-i18n="contact.form.message">Pesan Kamu</label>
+        </div>
+        <button type="submit" class="submit-btn">
+          <span data-i18n="contact.form.send">Kirim Pesan</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </form>
+      
+      <div class="form-status" id="formStatus"></div>
+      
+      <div class="contact-divider">
+        <span data-i18n="contact.or">ATAU HUBUNGI LANGSUNG</span>
+      </div>
+      
+      <div class="hire-actions">
+        <a class="hire-btn email" target="_blank" rel="noopener noreferrer"
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=brilliantsyah.webdev@gmail.com&su=Quick%20Question">
+          <span data-i18n="contact.emailDirect">Email Langsung</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a class="hire-btn wa" target="_blank" rel="noopener noreferrer"
+           href="https://wa.me/6285727794642?text=Hi%20Brilliantsyah!%20Saya%20punya%20pertanyaan%20tentang%20layanan%20kamu.">
+          <span>Chat WhatsApp</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- FOOTER -->
+<!-- ============================================= -->
+<footer>
+  <div class="footer-content">
+    <p data-i18n="footer.copy">© 2026 EL-Portfolio • Dibuat dengan ☕ & passion</p>
+    <div class="footer-links">
+      <a href="#home" data-i18n="nav.home">Beranda</a>
+      <a href="#about" data-i18n="nav.about">Tentang</a>
+      <a href="#projects" data-i18n="nav.projects">Proyek</a>
+      <a href="#contact" data-i18n="nav.contact">Kontak</a>
+    </div>
+  </div>
+  <div class="easter-egg">
+    <button id="konamiCode" style="opacity:0;position:absolute;">🎮</button>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+  <div class="lightbox-content">
+    <img src="" alt="Enlarged project image" id="lightboxImg">
+  </div>
+</div>
+
+<!-- JavaScript Files -->
+<script src="js/particles.js" defer></script>
+<script src="js/cursor.js" defer></script>
+<script src="js/cursor-trail.js" defer></script>
+<script src="js/theme.js" defer></script>
+<script src="js/sound.js" defer></script>
+<script src="js/language.js" defer></script>
+<script src="js/menu.js" defer></script>
+<script src="js/scroll.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/tilt.js" defer></script>
+<script src="js/testimonials.js" defer></script>
+<script src="js/contact-form.js" defer></script>
+<script src="js/faq.js" defer></script>
+<script src="js/easter-eggs.js" defer></script>
+<script src="js/loader.js" defer></script>
+
+</body>
+</html>
