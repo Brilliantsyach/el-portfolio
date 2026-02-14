@@ -272,6 +272,8 @@
   padding: 4px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: auto; /* ← Push ke kanan */
+  flex-shrink: 0; /* ← Prevent shrinking */
 }
 
 .lang-btn {
@@ -297,32 +299,6 @@
 .lang-btn.active {
   background: linear-gradient(135deg, var(--accent-main), var(--accent-soft));
   color: #000;
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .lang-switcher {
-    gap: 2px;
-    padding: 3px;
-    margin-right: 5px; /* Kasih space dari menu button */
-  }
-  
-  .lang-btn {
-    padding: 4px 8px;
-    font-size: 0.65rem; /* ← Lebih kecil di mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .lang-switcher {
-    gap: 2px;
-    padding: 3px;
-  }
-  
-  .lang-btn {
-    padding: 3px 6px;
-    font-size: 0.6rem; /* ← Lebih kecil lagi */
-  }
 }
 
 /* ========== TESTIMONIALS SECTION ========== */
@@ -766,3 +742,4 @@
     font-size: 0.6rem; /* ← Lebih kecil lagi */
   }
 }
+
