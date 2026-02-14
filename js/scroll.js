@@ -4,7 +4,7 @@
 
 const progress = document.getElementById('progress');
 const backToTop = document.getElementById('backToTop');
-const header = document.querySelector('header');
+// const header = document.querySelector('header');
 const sections = document.querySelectorAll('section');
 const scrollNavLinks = document.querySelectorAll('.nav-link');
 
@@ -25,16 +25,16 @@ window.addEventListener('scroll', function() {
     }
   }
   
-  if (header) {
-    if (scrollTop > 100) {
-      header.style.background = 'rgba(10, 8, 20, 0.9)';
-      header.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.5)';
-    } else {
-      header.style.background = 'rgba(10, 8, 20, 0.6)';
-      header.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.3)';
-    }
-  }
-});
+//   if (header) {
+//     if (scrollTop > 100) {
+//       header.style.background = 'rgba(10, 8, 20, 0.9)';
+//       header.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.5)';
+//     } else {
+//       header.style.background = 'rgba(10, 8, 20, 0.6)';
+//       header.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.3)';
+//     }
+//   }
+// });
 
 if (backToTop) {
   backToTop.addEventListener('click', function() {
@@ -113,4 +113,5 @@ if (scrollIndicator) {
       scrollIndicator.style.opacity = '0.7';
     }
   });
+
 }
