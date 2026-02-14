@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://el-one-and-only.vercel.app/sitemap.xml
