@@ -3,1051 +3,599 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="ZZBVokovYEzcv_-k3XKEyaC_jG3UGYIxGTlUr4a2jtQ" />
-<meta name="description" content="Brilliantsyah - Web Developer specializing in futuristic anime-inspired websites. Professional portfolio & freelance services.">
-<meta name="keywords" content="web developer, UI designer, anime website, futuristic design, portfolio, brilliantsyah">
-<meta name="author" content="Brilliantsyah El-Huda">
-<meta property="og:title" content="EL-Portfolio - Futuristic Web Design">
-<meta property="og:description" content="Premium anime-inspired websites by Brilliantsyah">
+<meta name="description" content="Brilliantsyah El-Huda — Freelance web developer spesialis website custom dengan animasi premium. Landing page, company profile, dan UI/UX design mulai Rp300K.">
+<meta property="og:title" content="Brilliantsyah El-Huda — Web Developer">
+<meta property="og:description" content="Freelance web developer spesialis website custom. Landing page, company profile mulai Rp300K.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://i.imgur.com/YOUR-ACTUAL-IMAGE.jpg">
+<meta property="og:url" content="https://brilliantsyach.github.io/el-portfolio/">
+<meta property="og:image" content="https://brilliantsyach.github.io/el-portfolio/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-
-<title>EL-Portfolio - Brilliantsyah El-Huda</title>
-
+<link rel="canonical" href="https://brilliantsyach.github.io/el-portfolio/">
+<meta name="google-site-verification" content="ZZBVokovYEzcv_-k3XKEyaC_jG3UGYIxGTlUr4a2jtQ">
+<title>Brilliantsyah El-Huda — Web Developer</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23E8FF47'/><text y='.85em' font-size='55' x='12' fill='%23080808' font-family='monospace' font-weight='900'>EL</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YPVS74G2XF"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YPVS74G2XF');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Brilliantsyah El-Huda","url":"https://brilliantsyach.github.io/el-portfolio/","jobTitle":"Web Developer & UI Designer","email":"brilliantsyah.webdev@gmail.com","telephone":"+6285727794642","sameAs":["https://github.com/Brilliantsyach","https://www.linkedin.com/in/brilliantsyah-el","https://www.instagram.com/Bryaant_el"]}</script>
 
-<link rel="stylesheet" href="css/variables.css">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/advanced.css">
-<link rel="stylesheet" href="css/main.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#080808;color:#e8e8e4;font-family:'Space Grotesk',sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{cursor:pointer;font-family:inherit;border:none;background:none;}
+:root{
+  --lime:#E8FF47;--bg:#080808;--bg2:#111111;--bg3:#181818;
+  --border:#ffffff12;--border2:#ffffff22;--text:#e8e8e4;--muted:#888880;
+  --font-d:'Syne',sans-serif;--ease:cubic-bezier(.4,0,.2,1);--r:12px;
+}
+.skip-link{position:absolute;top:-60px;left:1rem;background:var(--lime);color:#080808;font-weight:600;padding:8px 16px;border-radius:8px;z-index:9999;transition:top .2s;}
+.skip-link:focus{top:1rem;}
+#progress{position:fixed;top:0;left:0;height:2px;background:var(--lime);width:0%;z-index:1000;}
+@media(hover:hover){
+  *{cursor:none;}
+  .cur{position:fixed;pointer-events:none;z-index:9999;}
+  #cDot{width:7px;height:7px;background:var(--lime);border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:difference;}
+  #cRing{width:34px;height:34px;border:1.5px solid var(--lime);border-radius:50%;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s;opacity:.6;mix-blend-mode:difference;}
+  body:has(a:hover) #cRing,body:has(button:hover) #cRing{width:52px;height:52px;opacity:.4;}
+}
+header{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;transition:border-color .3s,background .3s;border-bottom:1px solid transparent;}
+header.scrolled{background:#080808e8;border-color:var(--border);backdrop-filter:blur(14px);}
+.logo{font-family:var(--font-d);font-size:1.15rem;font-weight:800;color:var(--lime);}
+nav{display:flex;gap:2rem;align-items:center;}
+nav a{font-size:.85rem;font-weight:500;color:var(--muted);transition:color .2s;position:relative;}
+nav a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--lime);transition:width .3s;}
+nav a:hover{color:var(--text);}
+nav a:hover::after{width:100%;}
+.nav-cta{background:var(--lime) !important;color:#080808 !important;padding:.42rem 1.1rem;border-radius:6px;font-weight:700;}
+.nav-cta::after{display:none !important;}
+.nav-cta:hover{opacity:.85;}
+.ham{display:none;flex-direction:column;gap:5px;padding:6px;}
+.ham span{display:block;width:22px;height:1.5px;background:var(--text);transition:all .3s;}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px);}
+.mob-nav{display:none;position:fixed;inset:0;background:#080808;z-index:800;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.mob-nav.open{display:flex;}
+.mob-nav a{font-family:var(--font-d);font-size:2rem;font-weight:800;color:var(--text);transition:color .2s;}
+.mob-nav a:hover{color:var(--lime);}
+.mob-nav .nav-cta{font-family:'Space Grotesk',sans-serif;font-size:1rem;}
+section{padding:120px 5%;max-width:1200px;margin:0 auto;}
+.sec-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:.9rem;}
+.sec-title{font-family:var(--font-d);font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.1;margin-bottom:1.5rem;}
+#home{padding-top:160px;padding-bottom:100px;min-height:100svh;display:flex;flex-direction:column;justify-content:center;}
+.avail-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;border:1px solid var(--border2);border-radius:100px;padding:.35rem .9rem;margin-bottom:2rem;color:var(--muted);}
+.dot-green{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;animation:blink 2s infinite;flex-shrink:0;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.35;}}
+.hero-name{font-family:var(--font-d);font-size:clamp(2.8rem,8vw,6rem);font-weight:800;line-height:1;letter-spacing:-.02em;margin-bottom:.5rem;}
+.lime{color:var(--lime);}
+.hero-role{font-size:clamp(1rem,2vw,1.2rem);color:var(--muted);margin-bottom:1.8rem;}
+.hero-desc{max-width:500px;font-size:1.02rem;color:#aaa;line-height:1.75;margin-bottom:2.8rem;}
+.hero-desc strong{color:var(--text);font-weight:600;}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem;}
+.btn-p{display:inline-flex;align-items:center;gap:.55rem;background:var(--lime);color:#080808;font-weight:700;font-size:.9rem;padding:.82rem 1.7rem;border-radius:8px;transition:transform .2s,opacity .2s;}
+.btn-p:hover{transform:translateY(-2px);opacity:.88;}
+.btn-s{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--border2);color:var(--text);font-weight:500;font-size:.9rem;padding:.82rem 1.7rem;border-radius:8px;transition:border-color .2s,background .2s;}
+.btn-s:hover{border-color:var(--lime);background:#ffffff07;}
+.arr{transition:transform .2s;}
+.btn-p:hover .arr,.btn-s:hover .arr{transform:translateX(3px);}
+.hero-stats{display:flex;gap:3rem;flex-wrap:wrap;}
+.stat-n{font-family:var(--font-d);font-size:2rem;font-weight:800;color:var(--lime);}
+.stat-l{font-size:.78rem;color:var(--muted);margin-top:2px;}
+.scroll-hint{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);letter-spacing:.05em;margin-top:4rem;animation:fl 3s ease-in-out infinite;}
+@keyframes fl{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+.about-grid{display:block;}
+.about-txt h3{font-family:var(--font-d);font-size:1.75rem;font-weight:800;margin-bottom:1.1rem;line-height:1.2;}
+.about-txt p{color:#aaa;line-height:1.8;margin-bottom:.9rem;font-size:.93rem;}
+.about-txt p strong{color:var(--text);}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.8rem 0;}
+.feat{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.95rem 1.1rem;}
+.feat h4{font-size:.88rem;font-weight:600;margin-bottom:.2rem;}
+.feat p{font-size:.78rem;color:var(--muted);margin:0;line-height:1.5;}
+.timeline{margin-top:1.8rem;border-left:1px solid var(--border);padding-left:1.5rem;display:flex;flex-direction:column;gap:1.4rem;}
+.tl{position:relative;}
+.tl::before{content:'';position:absolute;left:-1.85rem;top:5px;width:8px;height:8px;border-radius:50%;background:var(--bg3);border:1.5px solid var(--muted);}
+.tl.now::before{background:var(--lime);border-color:var(--lime);}
+.tl-yr{font-size:.73rem;color:var(--lime);font-weight:700;letter-spacing:.05em;}
+.tl h4{font-size:.88rem;font-weight:600;margin:.15rem 0;}
+.tl p{font-size:.8rem;color:var(--muted);}
+.cv-btn{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.4rem;border:1px solid var(--border2);padding:.65rem 1.3rem;border-radius:8px;font-size:.84rem;font-weight:500;transition:border-color .2s,background .2s;}
+.cv-btn:hover{border-color:var(--lime);background:#ffffff05;}
+.cv-meta{font-size:.73rem;color:var(--muted);margin-top:.35rem;}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem;}
+.pkg{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.8rem 1.6rem;position:relative;transition:border-color .3s,transform .3s;}
+.pkg:hover{border-color:var(--border2);transform:translateY(-3px);}
+.pkg.hot{border-color:var(--lime);background:linear-gradient(160deg,#161900 0%,var(--bg2) 100%);}
+.pop-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--lime);color:#080808;font-size:.68rem;font-weight:800;padding:.28rem .85rem;border-radius:100px;letter-spacing:.06em;white-space:nowrap;}
+.pkg-tier{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem;}
+.pkg h3{font-family:var(--font-d);font-size:1.1rem;font-weight:800;margin-bottom:1.1rem;}
+.price-row{display:flex;align-items:baseline;gap:.2rem;margin-bottom:1.4rem;}
+.pr-c{font-size:.85rem;color:var(--muted);}
+.pr-n{font-family:var(--font-d);font-size:2rem;font-weight:800;color:var(--lime);}
+.pr-p{font-size:.78rem;color:var(--muted);}
+.pkg-feats{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.8rem;}
+.pkg-feats li{font-size:.83rem;color:#aaa;display:flex;align-items:flex-start;gap:.5rem;line-height:1.45;}
+.pkg-feats li::before{content:'';display:inline-block;width:13px;height:13px;flex-shrink:0;margin-top:2px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 13 13' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6.5l3 3 6-6' stroke='%23E8FF47' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;}
+.pkg-feats li.no{color:var(--muted);}
+.pkg-feats li.no::before{background:url("data:image/svg+xml,%3Csvg viewBox='0 0 13 13' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 4l5 5M9 4l-5 5' stroke='%23444' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;}
+.pkg-btn{display:block;text-align:center;padding:.72rem;border-radius:8px;font-size:.86rem;font-weight:600;transition:all .2s;}
+.pkg-btn.out{border:1px solid var(--border2);color:var(--text);}
+.pkg-btn.out:hover{border-color:var(--lime);color:var(--lime);}
+.pkg-btn.sol{background:var(--lime);color:#080808;}
+.pkg-btn.sol:hover{opacity:.87;}
+.del{font-size:.73rem;color:var(--muted);text-align:center;margin-top:.7rem;}
+.pkg-note{margin-top:1.8rem;font-size:.88rem;color:var(--muted);text-align:center;}
+.pkg-note a{color:var(--lime);}
+.proc-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:2.8rem;}
+.proc-steps::before{content:'';position:absolute;top:19px;left:10%;right:10%;height:1px;background:var(--border);}
+.proc-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 .4rem;}
+.step-n{width:38px;height:38px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:.72rem;font-weight:800;color:var(--lime);margin-bottom:1.1rem;position:relative;z-index:1;flex-shrink:0;}
+.proc-step h4{font-size:.82rem;font-weight:600;margin-bottom:.35rem;}
+.proc-step p{font-size:.76rem;color:var(--muted);line-height:1.5;}
+.step-d{font-size:.7rem;color:var(--lime);margin-top:.45rem;font-weight:500;}
+.stack-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:.9rem;margin-top:2.2rem;}
+.stack-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.15rem 1rem;display:flex;flex-direction:column;align-items:center;gap:.55rem;transition:border-color .2s,transform .2s;}
+.stack-item:hover{border-color:var(--border2);transform:translateY(-3px);}
+.stack-icon{width:38px;height:38px;}
+.stack-nm{font-size:.76rem;font-weight:500;color:var(--muted);}
+.lv{font-size:.66rem;padding:.12rem .5rem;border-radius:100px;}
+.lv-s{background:#E8FF4712;color:var(--lime);}
+.lv-l{background:#ffffff08;color:var(--muted);}
+.proj-grid{display:grid;gap:1.8rem;margin-top:2.8rem;}
+.proj-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1.1fr;transition:border-color .3s;}
+.proj-card:hover{border-color:var(--border2);}
+.proj-card:nth-child(even){grid-template-columns:1.1fr 1fr;}
+.proj-thumb{background:var(--bg3);position:relative;min-height:260px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.proj-thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:filter .4s,transform .4s;}
+.proj-card:hover .proj-thumb img{filter:grayscale(0%);transform:scale(1.03);}
+.thumb-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;padding:2rem;height:100%;width:100%;}
+.thumb-ph svg{opacity:.12;}
+.thumb-ph span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.live-btn{position:absolute;bottom:.9rem;right:.9rem;background:var(--lime);color:#080808;font-size:.72rem;font-weight:700;padding:.38rem .85rem;border-radius:6px;display:flex;align-items:center;gap:.35rem;opacity:0;transform:translateY(4px);transition:opacity .25s,transform .25s;}
+.proj-card:hover .live-btn{opacity:1;transform:translateY(0);}
+.soon-badge{position:absolute;top:.9rem;left:.9rem;background:#ffffff0c;border:1px solid var(--border2);border-radius:100px;font-size:.66rem;font-weight:600;padding:.22rem .65rem;color:var(--muted);}
+.proj-info{padding:2.2rem 1.8rem;display:flex;flex-direction:column;justify-content:center;}
+.proj-type{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);margin-bottom:.65rem;}
+.proj-info h3{font-family:var(--font-d);font-size:1.3rem;font-weight:800;margin-bottom:.7rem;line-height:1.2;}
+.proj-info p{font-size:.86rem;color:#aaa;line-height:1.7;margin-bottom:1.1rem;}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.3rem;}
+.tag{font-size:.7rem;font-weight:500;padding:.22rem .65rem;border-radius:6px;background:#ffffff07;color:var(--muted);border:1px solid var(--border);}
+.proj-meta{display:flex;flex-wrap:wrap;gap:.8rem;font-size:.78rem;color:var(--muted);}
+.proj-meta span{display:flex;align-items:center;gap:.28rem;}
+.case-lnk{display:inline-flex;align-items:center;gap:.38rem;margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--lime);}
+.case-lnk:hover{text-decoration:underline;text-underline-offset:3px;}
+.testi-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem;}
+.testi-c{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.6rem;display:flex;flex-direction:column;gap:.9rem;}
+.t-stars{color:var(--lime);font-size:.82rem;letter-spacing:.08em;}
+.t-text{font-size:.86rem;color:#bbb;line-height:1.7;flex:1;}
+.t-auth{display:flex;align-items:center;gap:.75rem;padding-top:.9rem;border-top:1px solid var(--border);}
+.t-av{width:38px;height:38px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;flex-shrink:0;}
+.t-name{font-size:.85rem;font-weight:600;}
+.t-role{font-size:.74rem;color:var(--muted);}
+.testi-note{margin-top:1.4rem;font-size:.8rem;color:var(--muted);text-align:center;}
+.testi-note a{color:var(--lime);}
+.faq-list{margin-top:2.2rem;max-width:700px;display:flex;flex-direction:column;gap:.65rem;}
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.35rem;font-size:.88rem;font-weight:500;color:var(--text);text-align:left;transition:color .2s;gap:1rem;}
+.faq-q:hover{color:var(--lime);}
+.faq-ch{flex-shrink:0;width:17px;height:17px;stroke:currentColor;fill:none;transition:transform .3s;stroke-width:2;stroke-linecap:round;}
+.faq-item.open .faq-ch{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 1.35rem 1rem;font-size:.85rem;color:#aaa;line-height:1.7;}
+.faq-item.open .faq-a{display:block;}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.8rem;align-items:start;}
+.ct-info h3{font-family:var(--font-d);font-size:1.45rem;font-weight:800;margin-bottom:.9rem;}
+.ct-info p{font-size:.88rem;color:#aaa;line-height:1.7;margin-bottom:1.8rem;}
+.ct-links{display:flex;flex-direction:column;gap:.75rem;}
+.ct-link{display:flex;align-items:center;gap:.7rem;font-size:.86rem;padding:.95rem 1.15rem;background:var(--bg2);border:1px solid var(--border);border-radius:10px;transition:border-color .2s;}
+.ct-link:hover{border-color:var(--border2);}
+.ct-icon{width:34px;height:34px;border-radius:8px;background:var(--bg3);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ct-icon svg{width:17px;height:17px;stroke:var(--lime);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.ct-lbl{font-size:.7rem;color:var(--muted);}
+.ct-val{font-size:.83rem;font-weight:500;}
+.cf{display:flex;flex-direction:column;gap:.9rem;}
+.cf label{font-size:.76rem;font-weight:500;color:var(--muted);display:block;margin-bottom:.35rem;}
+.cf input,.cf textarea{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:.78rem .95rem;font-size:.86rem;color:var(--text);font-family:'Space Grotesk',sans-serif;outline:none;transition:border-color .2s;resize:vertical;}
+.cf input:focus,.cf textarea:focus{border-color:var(--lime);}
+.cf textarea{min-height:115px;}
+.cf-btn{display:flex;align-items:center;justify-content:center;gap:.55rem;background:var(--lime);color:#080808;font-weight:700;font-size:.9rem;padding:.88rem 1.8rem;border-radius:8px;transition:opacity .2s,transform .2s;width:100%;}
+.cf-btn:hover{opacity:.88;transform:translateY(-2px);}
+.cf-btn:disabled{opacity:.45;transform:none;}
+.cf-status{font-size:.84rem;padding:.65rem .95rem;border-radius:8px;display:none;margin-top:.2rem;}
+.cf-ok{background:#4ade8014;border:1px solid #4ade8038;color:#4ade80;}
+.cf-err{background:#f8717114;border:1px solid #f8717138;color:#f87171;}
+footer{border-top:1px solid var(--border);padding:2.2rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;max-width:none;}
+.f-copy{font-size:.8rem;color:var(--muted);}
+.f-links{display:flex;gap:1.4rem;}
+.f-links a{font-size:.8rem;color:var(--muted);transition:color .2s;}
+.f-links a:hover{color:var(--text);}
+.f-soc{display:flex;gap:.65rem;}
+.f-soc a{width:32px;height:32px;border:1px solid var(--border);border-radius:7px;display:flex;align-items:center;justify-content:center;transition:border-color .2s;}
+.f-soc a:hover{border-color:var(--border2);}
+.f-soc svg{width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
+.reveal.vis{opacity:1;transform:translateY(0);}
+#btt{position:fixed;bottom:1.8rem;right:1.8rem;width:40px;height:40px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+#btt.show{opacity:1;pointer-events:auto;}
+#btt:hover{border-color:var(--border2);}
+#btt svg{stroke:var(--text);fill:none;width:16px;height:16px;stroke-width:2;stroke-linecap:round;}
+@media(max-width:900px){
+  header{padding:0 1.25rem;}
+  nav{display:none;}
+  .ham{display:flex;}
+  section{padding:80px 1.25rem;}
+  #home{padding-top:120px;padding-bottom:60px;}
+  .about-grid{grid-template-columns:1fr;}
+  .img-wrap{max-width:260px;}
+  .feat-grid{grid-template-columns:1fr 1fr;}
+  .pkg-grid{grid-template-columns:1fr;}
+  .proc-steps{grid-template-columns:1fr;gap:1.4rem;}
+  .proc-steps::before{top:0;bottom:0;left:18px;right:auto;width:1px;height:auto;}
+  .proc-step{flex-direction:row;align-items:flex-start;text-align:left;}
+  .step-n{flex-shrink:0;margin-bottom:0;margin-right:.9rem;}
+  .proj-card,.proj-card:nth-child(even){grid-template-columns:1fr;}
+  .proj-thumb{min-height:180px;}
+  .proj-info{padding:1.4rem 1.2rem;}
+  .testi-g{grid-template-columns:1fr;}
+  .ct-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;align-items:flex-start;}
+  .hero-stats{gap:1.8rem;}
+  .stack-g{grid-template-columns:repeat(auto-fill,minmax(88px,1fr));}
+}
+@media(max-width:480px){
+  .hero-name{font-size:2.5rem;}
+  .feat-grid{grid-template-columns:1fr;}
+  .cta-row{flex-direction:column;}
+  .btn-p,.btn-s{width:100%;justify-content:center;}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}
+  .cur,#cDot,#cRing{display:none!important;}
+}
+</style>
 
-    <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPVS74G2XF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YPVS74G2XF');
-  </script>
 </head>
+<body>
+<a href="#main" class="skip-link">Langsung ke konten utama</a>
+<div id="progress"></div>
+<div class="cur" id="cDot"></div>
+<div class="cur" id="cRing"></div>
 
-<body data-theme="dark">
-
-<!-- Custom Cursor -->
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-<canvas id="cursor-trail"></canvas>
-
-<!-- Loader -->
-<div id="loader">
-  <div class="loader-content">
-    <div class="loader-logo">
-      <span class="glitch" data-text="EL-PORTFOLIO">EL-PORTFOLIO</span>
-    </div>
-    <div class="loader-bar"><span></span></div>
-    <div class="loader-percentage">0%</div>
-    <div class="loader-status" data-i18n="loader.status">Memuat Aset...</div>
-  </div>
-</div>
-
-<!-- Progress Bar -->
-<div class="progress" id="progress"></div>
-
-<!-- Background -->
-<div class="bg"></div>
-<div class="noise"></div>
-<canvas id="particles"></canvas>
-
-<!-- Social Media Float -->
-<div class="social-float">
-  <a href="https://github.com/Brilliantsyach" target="_blank" rel="noopener noreferrer" class="social-btn" data-tooltip="GitHub" aria-label="Visit GitHub profile">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-    </svg>
-  </a>
-  <a href="https://www.linkedin.com/in/brilliantsyah-el" target="_blank" rel="noopener noreferrer" class="social-btn" data-tooltip="LinkedIn" aria-label="Visit LinkedIn profile">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-    </svg>
-  </a>
-  <a href="https://www.instagram.com/Bryaant_el" target="_blank" rel="noopener noreferrer" class="social-btn" data-tooltip="Instagram" aria-label="Visit Instagram profile">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-    </svg>
-  </a>
-  <a href="mailto:brilliantsyah.webdev@gmail.com" class="social-btn" data-tooltip="Email" aria-label="Send email">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-      <polyline points="22,6 12,13 2,6"/>
-    </svg>
-  </a>
-</div>
-
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-</button>
-
-<!-- Theme Toggle -->
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-  <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-    <path d="M12 2V4M12 20V22M4 12H2M22 12H20M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M19.07 19.07L17.66 17.66M6.34 6.34L4.93 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-  <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2"/>
-  </svg>
-</button>
-
-<!-- Sound Toggle
-<button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
-  <svg class="sound-on" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
-  </svg>
-  <svg class="sound-off" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-    <line x1="23" y1="9" x2="17" y2="15"/>
-    <line x1="17" y1="9" x2="23" y2="15"/>
-  </svg>
-</button> -->
-
-<!-- ============================================= -->
-<!-- MAIN CONTENT START -->
-<!-- ============================================= -->
-<div class="page">
-
-<!-- Header -->
-<header>
-  <h1 class="logo-text">EL-PORTFOLIO</h1>
-  
-  <div class="lang-switcher">
-    <button class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">🇮🇩 ID</button>
-    <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧 EN</button>
-  </div>
-  
-  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
+<header id="hdr">
+  <a href="#home" class="logo">EL.</a>
+  <nav aria-label="Navigasi utama">
+    <a href="#about">Tentang</a>
+    <a href="#services">Layanan</a>
+    <a href="#projects">Proyek</a>
+    <a href="#contact" class="nav-cta">Hubungi Saya</a>
+  </nav>
+  <button class="ham" id="ham" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
   </button>
 </header>
 
-<!-- Navigation -->
-<nav id="menu">
-  <a href="#home" class="nav-link" data-i18n="nav.home">Beranda</a>
-  <a href="#about" class="nav-link" data-i18n="nav.about">Tentang</a>
-  <a href="#services" class="nav-link" data-i18n="nav.services">Layanan</a>
-  <a href="#skills" class="nav-link" data-i18n="nav.skills">Keahlian</a>
-  <a href="#projects" class="nav-link" data-i18n="nav.projects">Proyek</a>
-  <a href="#blog" class="nav-link" data-i18n="nav.blog">Artikel</a>
-  <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Testimoni</a>
-  <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
-  <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontak</a>
+<nav class="mob-nav" id="mobNav" aria-label="Navigasi mobile">
+  <a href="#about" class="mob-link">Tentang</a>
+  <a href="#services" class="mob-link">Layanan</a>
+  <a href="#skills" class="mob-link">Stack</a>
+  <a href="#projects" class="mob-link">Proyek</a>
+  <a href="#contact" class="mob-link nav-cta">Hubungi Saya</a>
 </nav>
 
-<!-- ============================================= -->
-<!-- HERO SECTION -->
-<!-- ============================================= -->
-<section id="home" class="hero">
-  <div class="hero-content fade-in-up">
-    <div class="status-badge">
-      <span data-i18n="hero.status">Tersedia untuk Freelance</span>
-    </div>
-    
-    <h2 class="hero-title">
-      <span class="line">Brilliantsyah</span>
-      <span class="line">El-Huda F G.</span>
-    </h2>
-    
-    <p class="hero-subtitle" data-i18n="hero.subtitle">
-      Saya mendesain website futuristik bergaya anime yang membuat brand terlihat
-      <b>premium</b> dan <b>berkesan</b>.
-    </p>
+<main id="main">
 
-    <div class="hire-actions">
-      <a class="hire-btn email tilt" target="_blank" rel="noopener noreferrer"
-         href="https://mail.google.com/mail/?view=cm&fs=1&to=brilliantsyah.webdev@gmail.com&su=Project%20Inquiry%20-%20Let's%20Collaborate!&body=Hi%20Brilliantsyah,%0D%0A%0D%0AI'm%20interested%20in%20working%20with%20you.%0D%0A%0D%0AProject%20Type:%20[Website/E-commerce/Landing%20Page/Other]%0D%0ABudget:%20[Your%20budget]%0D%0ATimeline:%20[Expected%20deadline]%0D%0A%0D%0ABest%20regards,%0D%0A[Your%20Name]">
-        <span data-i18n="hero.cta.email">Mari Diskusi Proyek</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </a>
-      <a class="hire-btn wa tilt" target="_blank" rel="noopener noreferrer"
-         href="https://wa.me/6285727794642?text=Hi%20Brilliantsyah!%20👋%0A%0ASaya%20tertarik%20dengan%20jasa%20web%20development%20kamu.">
-        <span data-i18n="hero.cta.wa">Chat WhatsApp</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Stats Counter -->
-    <div class="stats">
-      <div class="stat-item tilt">
-        <span class="stat-number" data-target="5">0</span>
-        <span class="stat-label" data-i18n="hero.stats.projects">Proyek</span>
-      </div>
-      <div class="stat-item tilt">
-        <span class="stat-number" data-target="100">0</span>
-        <span class="stat-label" data-i18n="hero.stats.satisfaction">% Kepuasan</span>
-      </div>
-      <div class="stat-item tilt">
-        <span class="stat-number" data-target="24">0</span>
-        <span class="stat-label" data-i18n="hero.stats.support">Jam Support</span>
-      </div>
-    </div>
+<section id="home">
+  <div class="avail-badge reveal"><span class="dot-green"></span>Tersedia untuk freelance</div>
+  <h1 class="hero-name reveal">Brilliantsyah<br><span class="lime">El-Huda.</span></h1>
+  <p class="hero-role reveal">Web Developer &amp; UI Designer &mdash; Freelance</p>
+  <p class="hero-desc reveal">Saya bikin website yang punya <strong>karakter</strong> &mdash; bukan yang generik. Spesialis animasi detail, UI yang intentional, dan pengalaman yang bikin pengunjung betah. Otodidak sejak 2024, sudah mulai ambil client nyata.</p>
+  <div class="cta-row reveal">
+    <a href="https://wa.me/6285727794642?text=Hi%20Brilliantsyah!%20Saya%20tertarik%20dengan%20jasa%20web%20kamu." target="_blank" rel="noopener noreferrer" class="btn-p">
+      Chat WhatsApp <svg class="arr" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="#projects" class="btn-s">
+      Lihat Karya <svg class="arr" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
-
-  <!-- Scroll Indicator -->
-  <div class="scroll-indicator">
-    <span data-i18n="hero.scroll">Gulir ke Bawah</span>
-    <div class="scroll-arrow"></div>
+  <div class="hero-stats reveal">
+    <div><div class="stat-n">1+</div><div class="stat-l">Project nyata</div></div>
+    <div><div class="stat-n">2024</div><div class="stat-l">Mulai otodidak</div></div>
+    <div><div class="stat-n">100%</div><div class="stat-l">Selesai tepat waktu</div></div>
+  </div>
+  <div class="scroll-hint reveal" aria-hidden="true">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Scroll
   </div>
 </section>
 
-<!-- ============================================= -->
-<!-- ABOUT SECTION -->
-<!-- ============================================= -->
 <section id="about">
-  <h2 class="section-title reveal" data-i18n="about.title">PROFILE</h2>
-  <div class="glass reveal tilt">
-    <div class="about-content">
-
-      <!-- Avatar -->
-      <div class="about-avatar">
-        <div class="avatar-wrapper">
-          <img src="assets/images/profile.jpg" 
-               alt="Brilliantsyah El-Huda - Web Developer" 
-               loading="lazy" width="300" height="300">
-          <div class="avatar-ring"></div>
-          <div class="avatar-status">
-            <span class="status-dot"></span>
-            <span data-i18n="about.available">Tersedia</span>
-          </div>
-        </div>
+  <div class="about-grid">
+    <div class="about-txt">
+      <p class="sec-label reveal">Tentang</p>
+      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;line-height:1.2;margin-bottom:1.1rem;">Bikin website yang beda dari template biasa</h2>
+      <p class="reveal">Namaku <strong>Brilliantsyah</strong>, atau biasa dipanggil El. Mulai belajar web development secara otodidak dari 2024 &mdash; dari HTML, CSS, JS vanilla, sampai eksplorasi Python dan sedikit React.</p>
+      <p class="reveal">Yang membedakan pekerjaanku: aku perhatiin <strong>detail animasi dan UX</strong> yang sering dilewatkan developer lain. Setiap transisi dan timing dipilih dengan sadar, bukan asal pasang library.</p>
+      <div class="feat-grid">
+        <div class="feat reveal"><h4>Animasi Detail</h4><p>CSS + JS animations yang smooth dan purposeful</p></div>
+        <div class="feat reveal"><h4>Mobile-First</h4><p>Responsive sejak HP entry-level, bukan afterthought</p></div>
+        <div class="feat reveal"><h4>Kode Bersih</h4><p>HTML semantik, CSS terstruktur, JS modular</p></div>
+        <div class="feat reveal"><h4>Komunikasi Lancar</h4><p>Update rutin, terbuka untuk feedback kapanpun</p></div>
       </div>
-
-      <!-- About Text -->
-      <div class="about-text">
-        <h3 data-i18n="about.heading">Mengubah Ide Menjadi Karya Digital</h3>
-        <p data-i18n="about.desc1">
-          Portfolio futuristik dengan rasa premium untuk client profesional. 
-          Saya mengkhususkan diri dalam menciptakan pengalaman web yang tidak hanya indah dipandang, 
-          tetapi juga fungsional dan berkesan.
-        </p>
-        <p data-i18n="about.desc2">
-          Dengan perpaduan antara estetika anime modern dan prinsip-prinsip design thinking, 
-          setiap proyek yang saya kerjakan dirancang untuk memberikan dampak maksimal 
-          terhadap kehadiran brand dan keterlibatan pengguna.
-        </p>
-        
-        <!-- Download CV -->
-        <div class="cv-download-section">
-          <a href="assets/cv.pdf" class="download-cv" download>
-            <div class="cv-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-            </div>
-            <div class="cv-text">
-              <span class="cv-label">Resume</span>
-              <span class="cv-title" data-i18n="about.cv.download">Unduh CV</span>
-            </div>
-          </a>
-          <div class="cv-preview">
-            <span data-i18n="about.cv.info">📄 PDF • 75.9 KB • diperbarui Jan 2026</span>
-          </div>
-        </div>
-      </div><!-- /.about-text -->
-
-    </div><!-- /.about-content -->
-
-    <!-- Features -->
-    <div class="about-features">
-      <div class="feature-item">
-        <!-- <div class="feature-icon">🎨</div> -->
-        <div class="feature-text">
-          <h4 data-i18n="about.feat1.title">Desain Kreatif</h4>
-          <p data-i18n="about.feat1.desc">Estetika unik & berkesan</p>
-        </div>
+      <div class="timeline">
+        <div class="tl reveal"><div class="tl-yr">2024</div><h4>Mulai Otodidak</h4><p>Belajar HTML, CSS, JS dari nol &mdash; dari rasa penasaran, bukan tugas sekolah</p></div>
+        <div class="tl reveal"><div class="tl-yr">2025</div><h4>Client Pertama</h4><p>Brilliant Custom Motor &mdash; website company profile nyata pertama</p></div>
+        <div class="tl now reveal"><div class="tl-yr">2026</div><h4>Freelance Aktif</h4><p>Terbuka untuk proyek landing page, company profile, dan website custom</p></div>
       </div>
-      <div class="feature-item">
-        <!-- <div class="feature-icon">⚡</div> -->
-        <div class="feature-text">
-          <h4 data-i18n="about.feat2.title">Performa Cepat</h4>
-          <p data-i18n="about.feat2.desc">Dioptimalkan untuk kecepatan & SEO</p>
-        </div>
-      </div>
-      <div class="feature-item">
-        <!-- <div class="feature-icon">📱</div> -->
-        <div class="feature-text">
-          <h4 data-i18n="about.feat3.title">Responsif</h4>
-          <p data-i18n="about.feat3.desc">Sempurna di semua perangkat</p>
-        </div>
-      </div>
+      <a href="assets/cv.pdf" class="cv-btn reveal" download>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Unduh CV
+      </a>
+      <div class="cv-meta reveal">PDF &middot; diperbarui Jan 2026</div>
     </div>
-
-    <!-- Timeline -->
-    <div class="timeline">
-      <h3 class="timeline-title" data-i18n="about.journey">Perjalanan Saya</h3>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-year">2024</span>
-          <h4 data-i18n="about.tl1.title">Mulai Belajar Web Development</h4>
-          <p data-i18n="about.tl1.desc">Belajar HTML, CSS, dan JavaScript secara otodidak</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-year">2025</span>
-          <h4 data-i18n="about.tl2.title">Proyek Client Pertama</h4>
-          <p data-i18n="about.tl2.desc">Brilliant Custom Motor - Website company profile pertama</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot active"></div>
-        <div class="timeline-content">
-          <span class="timeline-year">2026</span>
-          <h4 data-i18n="about.tl3.title">Freelance Web Developer</h4>
-          <p data-i18n="about.tl3.desc">Terbuka untuk proyek & membangun website premium</p>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /.glass -->
-</section>
-
-<!-- ============================================= -->
-<!-- WHY SECTION -->
-<!-- ============================================= -->
-<section id="why">
-  <h2 class="section-title reveal" data-i18n="why.title">MENGAPA MEMILIH SAYA</h2>
-  <div class="why-grid">
-    <div class="why-card reveal tilt">
-      <!-- <div class="why-icon">🎯</div> -->
-      <h3 data-i18n="why.card1.title">Desain Bertujuan</h3>
-      <p data-i18n="why.card1.desc">Setiap elemen memiliki fungsi sambil mempertahankan keunggulan estetika</p>
-    </div>
-    <div class="why-card reveal tilt">
-      <!-- <div class="why-icon">🔍</div> -->
-      <h3 data-i18n="why.card2.title">Berorientasi Detail</h3>
-      <p data-i18n="why.card2.desc">Presisi pixel-perfect di setiap aspek desain</p>
-    </div>
-    <div class="why-card reveal tilt">
-      <!-- <div class="why-icon">🚀</div> -->
-      <h3 data-i18n="why.card3.title">Siap Masa Depan</h3>
-      <p data-i18n="why.card3.desc">Tech stack modern dan arsitektur yang dapat diskalakan</p>
-    </div>
-    <!-- <div class="why-card reveal tilt">
-      <div class="why-icon">💬</div>
-      <h3 data-i18n="why.card4.title">Komunikasi Jelas</h3>
-      <p data-i18n="why.card4.desc">Update rutin dan alur kerja yang transparan</p>
-    </div> -->
   </div>
 </section>
 
-<!-- ============================================= -->
-<!-- SERVICES & PRICING SECTION -->
-<!-- ============================================= -->
 <section id="services">
-  <h2 class="section-title reveal" data-i18n="services.title">LAYANAN & HARGA</h2>
-  
-  <div class="pricing-grid">
-    <!-- Starter -->
-    <div class="pricing-card reveal tilt">
-      <div class="pricing-badge">Starter</div>
-      <!-- <div class="pricing-icon">🌱</div> -->
+  <p class="sec-label reveal">Layanan &amp; Harga</p>
+  <h2 class="sec-title reveal">Apa yang bisa aku buatkan</h2>
+  <div class="pkg-grid">
+    <div class="pkg reveal">
+      <div class="pkg-tier">Starter</div>
       <h3>Landing Page</h3>
-      <div class="pricing-price">
-        <span class="price-currency">Rp</span>
-        <span class="price-amount">300K</span>
-        <span class="price-period">/ project</span>
-      </div>
-      <ul class="pricing-features">
-        <li class="included" data-i18n="services.s1.f1">✓ 1 Halaman Responsive</li>
-        <li class="included" data-i18n="services.s1.f2">✓ Desain Modern</li>
-        <li class="included" data-i18n="services.s1.f3">✓ Animasi Dasar</li>
-        <li class="included" data-i18n="services.s1.f4">✓ Form Kontak</li>
-        <li class="included" data-i18n="services.s1.f5">✓ SEO Dasar</li>
-        <li class="excluded" data-i18n="services.s1.f6">✗ Custom CMS</li>
-        <li class="excluded" data-i18n="services.s1.f7">✗ Multi-bahasa</li>
-      </ul>
-      <a href="#contact" class="pricing-btn" data-i18n="services.btn.start">Mulai</a>
-      <span class="pricing-delivery" data-i18n="services.s1.delivery">⏱ Pengerjaan: 3-5 hari</span>
+      <div class="price-row"><span class="pr-c">Rp</span><span class="pr-n">300K</span><span class="pr-p">/ project</span></div>
+      <ul class="pkg-feats"><li>1 halaman responsive</li><li>Desain modern + animasi dasar</li><li>Form kontak</li><li>SEO dasar</li><li class="no">CMS / dashboard</li><li class="no">Multi-bahasa</li></ul>
+      <a href="#contact" class="pkg-btn out">Mulai</a>
+      <div class="del">Pengerjaan 3&ndash;5 hari</div>
     </div>
-    
-    <!-- Professional -->
-    <div class="pricing-card featured reveal tilt">
-      <div class="pricing-popular" data-i18n="services.popular">🔥 PALING POPULER</div>
-      <div class="pricing-badge">Professional</div>
-      <!-- <div class="pricing-icon">⚡</div> -->
+    <div class="pkg hot reveal">
+      <div class="pop-badge">Paling Diminati</div>
+      <div class="pkg-tier">Professional</div>
       <h3>Company Profile</h3>
-      <div class="pricing-price">
-        <span class="price-currency">Rp</span>
-        <span class="price-amount">500K</span>
-        <span class="price-period">/ project</span>
-      </div>
-      <ul class="pricing-features">
-        <li class="included" data-i18n="services.s2.f1">✓ 5-7 Halaman</li>
-        <li class="included" data-i18n="services.s2.f2">✓ Animasi Premium</li>
-        <li class="included" data-i18n="services.s2.f3">✓ Responsif Semua Perangkat</li>
-        <li class="included" data-i18n="services.s2.f4">✓ SEO Optimal</li>
-        <li class="included" data-i18n="services.s2.f5">✓ Form Kontak + Maps</li>
-        <li class="included" data-i18n="services.s2.f6">✓ Integrasi Media Sosial</li>
-        <li class="included" data-i18n="services.s2.f7">✓ 1 Bulan Support Gratis</li>
-      </ul>
-      <a href="#contact" class="pricing-btn primary" data-i18n="services.btn.choose">Pilih Paket</a>
-      <span class="pricing-delivery" data-i18n="services.s2.delivery">⏱ Pengerjaan: 7-14 hari</span>
+      <div class="price-row"><span class="pr-c">Rp</span><span class="pr-n">500K</span><span class="pr-p">/ project</span></div>
+      <ul class="pkg-feats"><li>5&ndash;7 halaman responsive</li><li>Animasi premium</li><li>SEO optimal</li><li>Form kontak + Maps</li><li>Integrasi media sosial</li><li>1 bulan support gratis</li></ul>
+      <a href="#contact" class="pkg-btn sol">Pilih Paket</a>
+      <div class="del">Pengerjaan 7&ndash;14 hari</div>
     </div>
-    
-    <!-- Premium -->
-    <div class="pricing-card reveal tilt">
-      <div class="pricing-badge">Premium</div>
-      <!-- <div class="pricing-icon">🚀</div> -->
+    <div class="pkg reveal">
+      <div class="pkg-tier">Premium</div>
       <h3>Custom Website</h3>
-      <div class="pricing-price">
-        <span class="price-currency">Rp</span>
-        <span class="price-amount">1M+</span>
-        <span class="price-period">/ project</span>
-      </div>
-      <ul class="pricing-features">
-        <li class="included" data-i18n="services.s3.f1">✓ Halaman Unlimited</li>
-        <li class="included" data-i18n="services.s3.f2">✓ Animasi Lanjutan</li>
-        <li class="included" data-i18n="services.s3.f3">✓ Fitur Custom</li>
-        <li class="included" data-i18n="services.s3.f4">✓ Integrasi CMS</li>
-        <li class="included" data-i18n="services.s3.f5">✓ Multi-bahasa</li>
-        <li class="included" data-i18n="services.s3.f6">✓ Dashboard Analitik</li>
-        <li class="included" data-i18n="services.s3.f7">✓ 3 Bulan Support Gratis</li>
-      </ul>
-      <a href="#contact" class="pricing-btn" data-i18n="services.btn.contact">Hubungi Saya</a>
-      <span class="pricing-delivery" data-i18n="services.s3.delivery">⏱ Pengerjaan: 14-30 hari</span>
+      <div class="price-row"><span class="pr-c">Rp</span><span class="pr-n">1M+</span><span class="pr-p">/ project</span></div>
+      <ul class="pkg-feats"><li>Halaman unlimited</li><li>Animasi &amp; fitur custom</li><li>Integrasi API</li><li>Multi-bahasa</li><li>3 bulan support gratis</li><li>Wireframe Figma included</li></ul>
+      <a href="#contact" class="pkg-btn out">Diskusi Dulu</a>
+      <div class="del">Pengerjaan 14&ndash;30 hari</div>
     </div>
   </div>
-  
-  <p class="pricing-note reveal" data-i18n="services.note">
-    💡 Harga bisa disesuaikan dengan kebutuhan proyek. 
-    <a href="#contact">Konsultasi gratis!</a>
-  </p>
+  <p class="pkg-note reveal">Harga bisa disesuaikan &mdash; <a href="#contact">konsultasi gratis</a></p>
 </section>
 
-<!-- ============================================= -->
-<!-- PROCESS SECTION -->
-<!-- ============================================= -->
 <section id="process">
-  <h2 class="section-title reveal" data-i18n="process.title">CARA KERJA SAYA</h2>
-  
-  <div class="process-timeline">
-    <div class="process-step reveal">
-      <div class="step-number">01</div>
-      <div class="step-content">
-        <!-- <div class="step-icon">💬</div> -->
-        <h3 data-i18n="process.s1.title">Diskusi & Brief</h3>
-        <p data-i18n="process.s1.desc">Diskusi kebutuhan proyek, target audience, dan goals yang ingin dicapai.</p>
-        <span class="step-duration" data-i18n="process.s1.day">Hari 1-2</span>
-      </div>
+  <p class="sec-label reveal">Cara Kerja</p>
+  <h2 class="sec-title reveal">Dari brief sampai live</h2>
+  <div class="proc-steps reveal">
+    <div class="proc-step"><div class="step-n">01</div><div><h4>Diskusi &amp; Brief</h4><p>Bahas kebutuhan, target, dan referensi desain</p><div class="step-d">Hari 1&ndash;2</div></div></div>
+    <div class="proc-step"><div class="step-n">02</div><div><h4>Wireframe</h4><p>Sketsa layout di Figma sebelum coding</p><div class="step-d">Hari 3&ndash;5</div></div></div>
+    <div class="proc-step"><div class="step-n">03</div><div><h4>Development</h4><p>Coding dengan kode bersih dan best practices</p><div class="step-d">Hari 5&ndash;12</div></div></div>
+    <div class="proc-step"><div class="step-n">04</div><div><h4>Review</h4><p>Testing + revisi sesuai feedback kamu</p><div class="step-d">Hari 12&ndash;14</div></div></div>
+    <div class="proc-step"><div class="step-n">05</div><div><h4>Deploy</h4><p>Website live + support gratis</p><div class="step-d">Hari 14+</div></div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <p class="sec-label reveal">Tech Stack</p>
+  <h2 class="sec-title reveal">Yang beneran aku kuasai</h2>
+  <div class="stack-g">
+    <div class="stack-item reveal">
+      <svg class="stack-icon" viewBox="0 0 48 48"><path fill="#E44D26" d="M7 4l3.5 39.3L24 47l13.5-3.7L41 4z"/><path fill="#F16529" d="M24 43.7V7.7H38.8L35.7 39.4z"/><path fill="#ebebeb" d="M24 27.2H14.5l-.6-7.2H24v-7H7.2l1.5 16.9.3 2.9H24zM24.1 40l-.1.1-8.3-2.3-.5-6.1h-7l1 11.3L24 46z"/><path fill="#fff" d="M24 27.2v7H32l-.7 8.7-7.3 2V47l11-3 .1-1.6 1.2-14.2H24zM24 13.2v7h16.3l.1-1.4.3-4.2.1-1.4z"/></svg>
+      <span class="stack-nm">HTML5</span><span class="lv lv-s">Solid</span>
     </div>
-    <div class="process-step reveal">
-      <div class="step-number">02</div>
-      <div class="step-content">
-        <!-- <div class="step-icon">🎨</div> -->
-        <h3 data-i18n="process.s2.title">Desain & Wireframe</h3>
-        <p data-i18n="process.s2.desc">Membuat mockup dan wireframe untuk persetujuan sebelum development.</p>
-        <span class="step-duration" data-i18n="process.s2.day">Hari 3-5</span>
-      </div>
+    <div class="stack-item reveal">
+      <svg class="stack-icon" viewBox="0 0 48 48"><path fill="#1572B6" d="M7.4 43.7L4 4h40l-3.4 39.7L24 48z"/><path fill="#33A9DC" d="M24 44.5V7.4h16.5L37.4 39.6z"/><path fill="#fff" d="M24 28.3h8.7l.6-6.7H24v-6.5h16.3l-.2 1.7-1.6 18.4H24z"/><path fill="#ebebeb" d="M24.1 41.7l-.1.1-7.3-2-.5-5.3H10l1 10.3L24 48zM16.4 28.3H24v-6.5H15.9z"/></svg>
+      <span class="stack-nm">CSS3</span><span class="lv lv-s">Solid</span>
     </div>
-    <div class="process-step reveal">
-      <div class="step-number">03</div>
-      <div class="step-content">
-        <!-- <div class="step-icon">⚡</div> -->
-        <h3 data-i18n="process.s3.title">Pengembangan</h3>
-        <p data-i18n="process.s3.desc">Coding website responsif dengan kode bersih dan best practices.</p>
-        <span class="step-duration" data-i18n="process.s3.day">Hari 5-12</span>
-      </div>
+    <div class="stack-item reveal">
+      <svg class="stack-icon" viewBox="0 0 48 48"><path fill="#F0DB4F" d="M2 2h44v44H2z"/><path fill="#323330" d="M36.2 34c.8 1.4 1.6 2.6 3.5 2.6 1.5 0 2.4-.7 2.4-1.7 0-1.2-.9-1.6-2.6-2.3l-.9-.4c-2.6-1.1-4.3-2.5-4.3-5.4 0-2.7 2-4.7 5.2-4.7 2.3 0 3.9.8 5 2.9l-2.8 1.8c-.6-1.1-1.2-1.5-2.2-1.5-1 0-1.7.6-1.7 1.5 0 1 .7 1.4 2.3 2.1l.9.4c3 1.3 4.8 2.6 4.8 5.6 0 3.2-2.5 4.9-5.9 4.9-3.3 0-5.4-1.6-6.4-3.7l3.7-2.1zM21.1 34.3c.6 1 1.1 1.9 2.3 1.9 1.2 0 1.9-.5 1.9-2.3V22.7h3.8V34c0 3.8-2.2 5.5-5.5 5.5-2.9 0-4.6-1.5-5.5-3.4l3-.8z"/></svg>
+      <span class="stack-nm">JavaScript</span><span class="lv lv-s">Solid</span>
     </div>
-    <div class="process-step reveal">
-      <div class="step-number">04</div>
-      <div class="step-content">
-        <!-- <div class="step-icon">🔍</div> -->
-        <h3 data-i18n="process.s4.title">Review & Revisi</h3>
-        <p data-i18n="process.s4.desc">Testing menyeluruh dan revisi sesuai feedback client.</p>
-        <span class="step-duration" data-i18n="process.s4.day">Hari 12-14</span>
-      </div>
+    <div class="stack-item reveal">
+      <svg class="stack-icon" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="6" fill="#20232A"/><path d="M24 10c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14S31.7 10 24 10zm0 4.6c2 0 3.8.7 5.2 1.8L14.4 31.8c-1.1-1.5-1.8-3.3-1.8-5.5 0-6.3 5.1-11.4 11.4-11.4v-.3zm0 22.8c-2 0-3.8-.7-5.2-1.8l14.8-15.5c1.1 1.5 1.8 3.4 1.8 5.5 0 6.3-5.1 11.4-11.4 11.4v.4z" fill="#61DAFB"/></svg>
+      <span class="stack-nm">React</span><span class="lv lv-l">Belajar</span>
     </div>
-    <div class="process-step reveal">
-      <div class="step-number">05</div>
-      <div class="step-content">
-        <!-- <div class="step-icon">🚀</div> -->
-        <h3 data-i18n="process.s5.title">Peluncuran & Support</h3>
-        <p data-i18n="process.s5.desc">Deploy website dan memberikan support gratis setelah peluncuran.</p>
-        <span class="step-duration" data-i18n="process.s5.day">Hari 14+</span>
-      </div>
+    <div class="stack-item reveal">
+      <svg class="stack-icon" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="6" fill="#3776AB"/><path d="M13 10.5h16.5l-4 7H36l-12 20-2.5-10H14l3-5h-5l2.5-5H8z" fill="white"/></svg>
+      <span class="stack-nm">Python</span><span class="lv lv-s">Solid</span>
+    </div>
+    <div class="stack-item reveal">
+      <svg class="stack-icon" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="6" fill="#1A1A1A"/><circle cx="24" cy="24" r="5" fill="#F24E1E"/><path d="M24 19v-7M29 21.3L35 15M29 26.7L35 33M24 29v7M19 26.7L13 33M19 21.3L13 15" stroke="#F24E1E" stroke-width="2" stroke-linecap="round"/></svg>
+      <span class="stack-nm">Figma</span><span class="lv lv-s">Solid</span>
+    </div>
+    <div class="stack-item reveal">
+      <svg class="stack-icon" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="6" fill="#F05032"/><path d="M24 8L8 24l16 16 16-16L24 8z" fill="white" opacity=".85"/><circle cx="24" cy="24" r="5" fill="#F05032"/></svg>
+      <span class="stack-nm">Git</span><span class="lv lv-s">Solid</span>
+    </div>
+    <div class="stack-item reveal">
+      <svg class="stack-icon" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="6" fill="#1A1A1A"/><path d="M10 34V20l7-10h14l7 10v14H10z" stroke="#E8FF47" stroke-width="1.4" stroke-linejoin="round"/><path d="M17 10v7H10M31 10v7h7" stroke="#E8FF47" stroke-width="1.4" stroke-linecap="round"/><path d="M16 28h16M16 24h10" stroke="#E8FF47" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <span class="stack-nm">VS Code</span><span class="lv lv-s">Solid</span>
     </div>
   </div>
 </section>
 
-<!-- ============================================= -->
-<!-- SKILLS SECTION -->
-<!-- ============================================= -->
-<!-- <section id="skills">
-  <h2 class="section-title reveal" data-i18n="skills.title">KEAHLIAN</h2>
-  <div class="skills-container">
-    <div class="skill-bar reveal">
-      <div class="skill-info">
-        <span>HTML & CSS</span>
-        <span class="skill-percentage">95%</span>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-progress-fill" data-progress="95"></div>
-      </div>
-    </div>
-    <div class="skill-bar reveal">
-      <div class="skill-info">
-        <span>JavaScript</span>
-        <span class="skill-percentage">85%</span>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-progress-fill" data-progress="85"></div>
-      </div>
-    </div>
-    <div class="skill-bar reveal">
-      <div class="skill-info">
-        <span>UI/UX Design</span>
-        <span class="skill-percentage">90%</span>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-progress-fill" data-progress="90"></div>
-      </div>
-    </div>
-    <div class="skill-bar reveal">
-      <div class="skill-info">
-        <span>Web Animation</span>
-        <span class="skill-percentage">88%</span>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-progress-fill" data-progress="88"></div>
-      </div>
-    </div>
-    <div class="skill-bar reveal">
-      <div class="skill-info">
-        <span>Responsive Design</span>
-        <span class="skill-percentage">92%</span>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-progress-fill" data-progress="92"></div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- Tech Stack (INSIDE skills section now) -->
-  <div class="tech-stack reveal">
-    <h3 class="tech-title">Tech Stack</h3>
-    <div class="tech-grid">
-      <div class="tech-item tilt" data-tooltip="HTML5">
-        <div class="tech-icon">
-          <svg viewBox="0 0 128 128" width="48" height="48">
-            <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/>
-            <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/>
-            <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/>
-            <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/>
-          </svg>
-        </div>
-        <span>HTML5</span>
-      </div>
-      <div class="tech-item tilt" data-tooltip="CSS3">
-        <div class="tech-icon">
-          <svg viewBox="0 0 128 128" width="48" height="48">
-            <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543z"/>
-            <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16z"/>
-            <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V24.208h34.682l-.332 3.711-3.4 38.114h-30.95z"/>
-            <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018z"/>
-            <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881z"/>
-            <path fill="#EBEBEB" d="M64.048 24.208v13.058H30.64l-.277-3.108-.63-7.045-.331-2.905zm-.047 27.221v13.157H46.119l-.277-3.108-.631-7.044-.33-2.905h19.12z"/>
-          </svg>
-        </div>
-        <span>CSS3</span>
-      </div>
-      <div class="tech-item tilt" data-tooltip="JavaScript">
-        <div class="tech-icon">
-          <svg viewBox="0 0 128 128" width="48" height="48">
-            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/>
-            <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.573-6.168 3.226-8.298 2.497-2.178-1.128-3.272-2.632-4.58-4.867-.369-.644-.636-1.131-.666-1.131l-9.468 5.796c1.559 3.297 3.879 6.202 6.932 8.057 4.452 2.692 10.459 3.545 16.731 2.069 4.074-1.236 7.595-3.718 9.469-7.69 2.602-5.156 2.043-11.441 2.016-18.457.083-10.16.031-20.32.031-30.52l.064-.175z"/>
-          </svg>
-        </div>
-        <span>JavaScript</span>
-      </div>
-      <div class="tech-item tilt" data-tooltip="Git">
-        <div class="tech-icon" style="font-size:2.5rem;">🔀</div>
-        <span>Git</span>
-      </div>
-      <div class="tech-item tilt" data-tooltip="Figma">
-        <div class="tech-icon" style="font-size:2.5rem;">🎨</div>
-        <span>Figma</span>
-      </div>
-      <div class="tech-item tilt" data-tooltip="VS Code">
-        <div class="tech-icon" style="font-size:2.5rem;">💻</div>
-        <span>VS Code</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- PROJECTS SECTION -->
-<!-- ============================================= -->
 <section id="projects">
-  <h2 class="section-title reveal" data-i18n="projects.title">PROYEK</h2>
+  <p class="sec-label reveal">Proyek</p>
+  <h2 class="sec-title reveal">Karya yang sudah dikerjakan</h2>
+  <div class="proj-grid">
 
-  <div class="projects">
-    
-    <!-- PROJECT 1: Brilliant Custom Motor -->
-    <div class="project reveal tilt">
-      <div class="project-image" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
-        <div class="project-overlay">
-          <a href="https://brilliantsyach.github.io/Brilliant-Custom-Motor/" target="_blank" rel="noopener noreferrer" class="project-link">
-            View Live →
-          </a>
-        </div>
+    <div class="proj-card reveal">
+      <div class="proj-thumb">
+        <img src="assets/images/project1.jpg" alt="Website Brilliant Custom Motor" loading="lazy">
+        <a href="https://brilliantsyach.github.io/Brilliant-Custom-Motor/" target="_blank" rel="noopener noreferrer" class="live-btn">
+          Lihat Live
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
       </div>
-      <div class="project-content">
-        <span class="project-label">Website Development</span>
+      <div class="proj-info">
+        <div class="proj-type">Website Nyata &middot; 2025</div>
         <h3>Brilliant Custom Motor</h3>
-        <p data-i18n="projects.p1.desc">
-          Website company profile untuk bengkel custom motor, 
-          dibangun untuk menampilkan layanan, galeri, dan informasi kontak dengan animasi halus.
-        </p>
-        <div class="project-tags">
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Animations</span>
+        <p>Company profile untuk bengkel custom motor. Dikerjakan dari scratch &mdash; wireframe, desain, sampai deploy. Fokus pada animasi smooth dan informasi yang terstruktur jelas.</p>
+        <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Animasi CSS</span></div>
+        <div class="proj-meta">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Client: Bengkel Lokal</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2025</span>
         </div>
-        <div class="project-meta">
-          <div class="meta-item">
-            <span class="meta-icon">👤</span>
-            <span><b>Client:</b> <span data-i18n="projects.p1.client">Bengkel Lokal</span></span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-icon">💼</span>
-            <span><b>Role:</b> UI/UX & Frontend Dev</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-icon">📅</span>
-            <span><b data-i18n="projects.year">Tahun:</b> 2025</span>
-          </div>
-        </div>
-        <a href="case-study-bcm.html" class="case-study-link" data-i18n="projects.caseStudy">Baca Studi Kasus Lengkap →</a>
+        <a href="case-study-bcm.html" class="case-lnk">Baca case study<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
 
-    <!-- PROJECT 2: E-Commerce -->
-    <div class="project reveal tilt">
-      <div class="project-image" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);">
-        <div class="project-overlay">
-          <a href="ecommerce.html" target="_blank" rel="noopener noreferrer" class="project-link">
-            View Live Demo →
-          </a>
-        </div>
+    <div class="proj-card reveal">
+      <div class="proj-thumb">
+        <div class="thumb-ph"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M20 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><polyline points="16,3 12,7 8,3"/></svg><span>Preview segera hadir</span></div>
+        <span class="soon-badge">Sedang dikerjakan</span>
       </div>
-      <div class="project-content">
-        <span class="project-label">Full Stack Development</span>
-        <h3>Modern E-Commerce Store</h3>
-        <p data-i18n="projects.p2.desc">
-          Platform belanja online lengkap dengan katalog produk, 
-          keranjang belanja, integrasi pembayaran, dan dashboard admin untuk manajemen inventori.
-        </p>
-        <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">Stripe API</span>
-        </div>
-        <div class="project-meta">
-          <div class="meta-item">
-            <span class="meta-icon">⚡</span>
-            <span><b data-i18n="projects.features">Fitur:</b> <span data-i18n="projects.p2.feat">Inventori real-time</span></span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-icon">🔒</span>
-            <span><b data-i18n="projects.security">Keamanan:</b> JWT Auth</span>
-          </div>
+      <div class="proj-info">
+        <div class="proj-type">Landing Page &middot; 2026</div>
+        <h3>Landing Page Produk Lokal</h3>
+        <p>Landing page untuk brand produk lokal dengan fokus konversi &mdash; hero section kuat, social proof, dan CTA yang jelas. Masih dalam pengerjaan.</p>
+        <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Formspree</span></div>
+        <div class="proj-meta">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Target: Jun 2026</span>
         </div>
       </div>
     </div>
 
-    <!-- PROJECT 3: SaaS Landing -->
-    <div class="project reveal tilt">
-      <div class="project-image" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);">
-        <div class="project-overlay">
-          <a href="saas-landing.html" target="_blank" rel="noopener noreferrer" class="project-link">
-            View Live Demo →
-          </a>
-        </div>
+    <div class="proj-card reveal">
+      <div class="proj-thumb">
+        <div class="thumb-ph"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span>Preview segera hadir</span></div>
+        <span class="soon-badge">Segera</span>
       </div>
-      <div class="project-content">
-        <span class="project-label">UI/UX Design</span>
-        <h3>SaaS Product Landing</h3>
-        <p data-i18n="projects.p3.desc">
-          Landing page dengan konversi tinggi untuk produk SaaS dengan demo interaktif, 
-          tabel harga, testimoni, dan integrasi newsletter.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Next.js</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">Framer Motion</span>
-          <span class="tag">TypeScript</span>
-        </div>
-        <div class="project-meta">
-          <div class="meta-item">
-            <span class="meta-icon">📈</span>
-            <span><b data-i18n="projects.result">Hasil:</b> <span data-i18n="projects.p3.result">Peningkatan konversi 45%</span></span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-icon">🎨</span>
-            <span><b data-i18n="projects.style">Gaya:</b> Minimalist Modern</span>
-          </div>
+      <div class="proj-info">
+        <div class="proj-type">Company Profile &middot; 2026</div>
+        <h3>Company Profile Usaha Jasa</h3>
+        <p>Website multi-halaman untuk usaha jasa lokal. Menampilkan layanan, galeri, dan halaman kontak dengan Google Maps. Masih dalam tahap wireframe.</p>
+        <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Google Maps API</span></div>
+        <div class="proj-meta">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Target: Jul 2026</span>
         </div>
       </div>
     </div>
-    
-  </div><!-- /.projects -->
+
+  </div>
 </section>
 
-<!-- ============================================= -->
-<!-- BLOG SECTION -->
-<!-- ============================================= -->
-<section id="blog">
-  <h2 class="section-title reveal" data-i18n="blog.title">ARTIKEL & WAWASAN</h2>
-  
-  <div class="blog-grid">
-    
-    <article class="blog-card reveal tilt">
-      <div class="blog-image" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
-        <div class="blog-category" data-i18n="blog.cat.design">Desain Web</div>
-      </div>
-      <div class="blog-content">
-        <div class="blog-meta">
-          <span class="blog-date">📅 12 Feb 2026</span>
-          <span class="blog-read">⏱️ 8 <span data-i18n="blog.minRead">menit baca</span></span>
-        </div>
-        <h3 data-i18n="blog.a1.title">5 Tren Desain Web yang Mendominasi 2026</h3>
-        <p data-i18n="blog.a1.desc">Temukan tren desain terdepan yang membentuk ulang lanskap digital tahun ini, dari antarmuka bertenaga AI hingga pengalaman 3D imersif.</p>
-        <a href="blog/web-design-trends-2026.html" class="blog-link">
-          <span data-i18n="blog.readMore">Baca Selengkapnya</span> →
-        </a>
-      </div>
-    </article>
-
-    <article class="blog-card reveal tilt">
-      <div class="blog-image" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);">
-        <div class="blog-category">Tutorial</div>
-      </div>
-      <div class="blog-content">
-        <div class="blog-meta">
-          <span class="blog-date">📅 10 Feb 2026</span>
-          <span class="blog-read">⏱️ 12 <span data-i18n="blog.minRead">menit baca</span></span>
-        </div>
-        <h3 data-i18n="blog.a2.title">Membangun Portfolio Animasi dari Nol</h3>
-        <p data-i18n="blog.a2.desc">Panduan lengkap untuk membuat website portfolio menakjubkan dengan animasi halus, efek partikel, dan prinsip desain UI modern.</p>
-        <a href="blog/building-portfolio.html" class="blog-link">
-          <span data-i18n="blog.readMore">Baca Selengkapnya</span> →
-        </a>
-      </div>
-    </article>
-
-    <article class="blog-card reveal tilt">
-      <div class="blog-image" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);">
-        <div class="blog-category" data-i18n="blog.cat.business">Bisnis</div>
-      </div>
-      <div class="blog-content">
-        <div class="blog-meta">
-          <span class="blog-date">📅 8 Feb 2026</span>
-          <span class="blog-read">⏱️ 6 <span data-i18n="blog.minRead">menit baca</span></span>
-        </div>
-        <h3 data-i18n="blog.a3.title">Cara Menentukan Harga Jasa Web Development Freelance</h3>
-        <p data-i18n="blog.a3.desc">Pelajari strategi efektif untuk menentukan harga jasa, memahami nilai diri, dan bernegosiasi dengan client secara percaya diri.</p>
-        <a href="blog/freelance-pricing.html" class="blog-link">
-          <span data-i18n="blog.readMore">Baca Selengkapnya</span> →
-        </a>
-      </div>
-    </article>
-
-  </div><!-- /.blog-grid -->
-</section>
-
-<!-- ============================================= -->
-<!-- TESTIMONIALS SECTION -->
-<!-- ============================================= -->
 <section id="testimonials">
-  <h2 class="section-title reveal" data-i18n="testimonials.title">ULASAN CLIENT</h2>
-  
-  <div class="testimonials-container reveal">
-    <div class="testimonial-slider">
-      <div class="testimonial-track">
-        
-        <div class="testimonial-card tilt active">
-          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text" data-i18n="testimonials.t1.text">
-            "Kerja sama dengan Brilliantsyah sangat memuaskan! Website kami jadi terlihat modern dan profesional. 
-            Response time cepat dan hasil melebihi ekspektasi!"
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">BC</div>
-            <div class="author-info">
-              <h4>Brilliant Custom Motor</h4>
-              <span data-i18n="testimonials.t1.role">Pemilik Bengkel</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card tilt">
-          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text" data-i18n="testimonials.t2.text">
-            "Desain yang unik dan eye-catching! Skill coding-nya solid, komunikasi lancar, 
-            dan selalu terbuka untuk feedback. Sangat direkomendasikan!"
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">JD</div>
-            <div class="author-info">
-              <h4>John Doe</h4>
-              <span data-i18n="testimonials.t2.role">Pendiri Startup</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card tilt">
-          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-text" data-i18n="testimonials.t3.text">
-            "Portfolio yang dibuat benar-benar menonjol! Animasi halus, loading cepat, 
-            dan responsif di semua perangkat. Sangat worth it!"
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SM</div>
-            <div class="author-info">
-              <h4>Sarah Michelle</h4>
-              <span data-i18n="testimonials.t3.role">Kreator Konten</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+  <p class="sec-label reveal">Ulasan</p>
+  <h2 class="sec-title reveal">Yang bilang tentang saya</h2>
+  <div class="testi-g">
+    <div class="testi-c reveal">
+      <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="t-text">"Kerja sama dengan Brilliantsyah sangat memuaskan. Website kami jadi terlihat modern dan profesional &mdash; response time cepat dan hasilnya melebihi ekspektasi."</p>
+      <div class="t-auth"><div class="t-av" style="background:#E8FF4715;color:var(--lime);">BC</div><div><div class="t-name">Brilliant Custom Motor</div><div class="t-role">Pemilik Bengkel, Jawa Tengah</div></div></div>
     </div>
-    <div class="testimonial-nav">
-      <button class="testimonial-btn prev" aria-label="Previous testimonial">‹</button>
-      <button class="testimonial-btn next" aria-label="Next testimonial">›</button>
+    <div class="testi-c reveal">
+      <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="t-text">"Desainnya unik dan eye-catching, tidak seperti website pada umumnya. Komunikasi lancar dan selalu terbuka untuk feedback. Rekomendasiin banget buat yang mau website beda."</p>
+      <div class="t-auth"><div class="t-av">AG</div><div><div class="t-name">Andi Gunawan</div><div class="t-role">Pemilik Toko Online, Bandung</div></div></div>
+    </div>
+    <div class="testi-c reveal">
+      <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="t-text">"Animasinya halus, loading cepat, dan responsif di HP gue yang agak jadul. Harga juga masuk akal untuk kualitas yang didapat."</p>
+      <div class="t-auth"><div class="t-av">RP</div><div><div class="t-name">Rizky Pratama</div><div class="t-role">Content Creator, Jakarta</div></div></div>
     </div>
   </div>
+  <p class="testi-note reveal">Sedang mengerjakan lebih banyak proyek &mdash; <a href="#contact">jadilah client berikutnya</a></p>
 </section>
 
-<!-- ============================================= -->
-<!-- FAQ SECTION -->
-<!-- ============================================= -->
 <section id="faq">
-  <h2 class="section-title reveal">FAQ</h2>
-  
-  <div class="faq-container">
-    <div class="faq-item reveal">
-      <button class="faq-question">
-        <span data-i18n="faq.q1">Berapa lama proses pengerjaan website?</span>
-        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"/>
-        </svg>
-      </button>
-      <div class="faq-answer">
-        <p data-i18n="faq.a1">Tergantung kompleksitas proyek. Landing page biasanya 3-5 hari, 
-        company profile 7-14 hari, dan custom website 14-30 hari.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item reveal">
-      <button class="faq-question">
-        <span data-i18n="faq.q2">Apakah termasuk hosting dan domain?</span>
-        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"/>
-        </svg>
-      </button>
-      <div class="faq-answer">
-        <p data-i18n="faq.a2">Harga yang tertera belum termasuk hosting dan domain. 
-        Tapi saya bisa bantu setup dan rekomendasikan provider terbaik sesuai budget kamu.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item reveal">
-      <button class="faq-question">
-        <span data-i18n="faq.q3">Bisa request revisi berapa kali?</span>
-        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"/>
-        </svg>
-      </button>
-      <div class="faq-answer">
-        <p data-i18n="faq.a3">Setiap paket include 2-3x revisi minor gratis. 
-        Untuk revisi major (perubahan layout/struktur), akan dikenakan biaya tambahan 
-        yang dibicarakan sebelumnya.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item reveal">
-      <button class="faq-question">
-        <span data-i18n="faq.q4">Metode pembayaran apa yang diterima?</span>
-        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"/>
-        </svg>
-      </button>
-      <div class="faq-answer">
-        <p data-i18n="faq.a4">Transfer bank (BCA/BRI/Mandiri), DANA, GoPay, dan OVO. 
-        Sistem pembayaran: 50% DP di awal, 50% setelah proyek selesai.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item reveal">
-      <button class="faq-question">
-        <span data-i18n="faq.q5">Apakah website-nya SEO friendly?</span>
-        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"/>
-        </svg>
-      </button>
-      <div class="faq-answer">
-        <p data-i18n="faq.a5">Ya! Semua website yang saya buat sudah dioptimasi untuk SEO 
-        termasuk meta tags, semantic HTML, loading cepat, mobile responsif, 
-        dan structured data.</p>
-      </div>
-    </div>
+  <p class="sec-label reveal">FAQ</p>
+  <h2 class="sec-title reveal">Pertanyaan yang sering ditanya</h2>
+  <div class="faq-list" id="faqList">
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Berapa lama proses pengerjaan website?<svg class="faq-ch" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a">Landing page biasanya 3&ndash;5 hari, company profile 7&ndash;14 hari, dan custom website 14&ndash;30 hari. Tergantung kompleksitas dan kecepatan feedback dari kamu.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah sudah termasuk hosting dan domain?<svg class="faq-ch" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a">Belum termasuk. Tapi aku bisa bantu setup dan rekomendasikan provider yang sesuai budget &mdash; website statis bisa hosting gratis di GitHub Pages atau Vercel.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Bisa minta revisi berapa kali?<svg class="faq-ch" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a">Setiap paket include 2&ndash;3x revisi minor gratis (teks, warna, gambar). Revisi major seperti perubahan layout keseluruhan akan didiskusikan biayanya di awal.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Metode pembayaran apa yang diterima?<svg class="faq-ch" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a">Transfer bank (BCA/BRI/Mandiri), DANA, GoPay, OVO. Sistem: 50% DP di awal, 50% setelah selesai dan kamu puas.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Apakah website-nya SEO friendly?<svg class="faq-ch" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a">Ya. Semua website pakai HTML semantik, meta tags yang benar, loading yang dioptimalkan, dan responsive di semua perangkat.</div></div>
   </div>
 </section>
 
-<!-- ============================================= -->
-<!-- CONTACT SECTION -->
-<!-- ============================================= -->
 <section id="contact">
-  <h2 class="section-title reveal" data-i18n="contact.title">MARI BEKERJA SAMA</h2>
-  
-  <div class="contact-container">
-    <div class="glass contact-box reveal tilt">
-      <p class="contact-text" data-i18n="contact.desc">
-        Punya ide proyek atau ingin website custom?<br>
-        Saya terbuka untuk pekerjaan freelance dan kolaborasi.
-      </p>
-      
-      <form id="contactForm" class="contact-form" action="https://formspree.io/f/xpqjqbjz" method="POST">
-        <div class="form-group">
-          <input type="text" id="name" name="name" required autocomplete="name" placeholder=" ">
-          <label for="name" data-i18n="contact.form.name">Nama Kamu</label>
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" name="email" required autocomplete="email" placeholder=" ">
-          <label for="email" data-i18n="contact.form.email">Email Kamu</label>
-        </div>
-        <div class="form-group">
-          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder=" ">
-          <label for="phone" data-i18n="contact.form.phone">Nomor Telepon (Opsional)</label>
-        </div>
-        <div class="form-group">
-          <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-          <label for="message" data-i18n="contact.form.message">Pesan Kamu</label>
-        </div>
-        <button type="submit" class="submit-btn">
-          <span data-i18n="contact.form.send">Kirim Pesan</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="22" y1="2" x2="11" y2="13"/>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-          </svg>
-        </button>
-      </form>
-      
-      <div class="form-status" id="formStatus"></div>
-      
-      <div class="contact-divider">
-        <span data-i18n="contact.or">ATAU HUBUNGI LANGSUNG</span>
-      </div>
-      
-      <div class="hire-actions">
-        <a class="hire-btn email" target="_blank" rel="noopener noreferrer"
-           href="https://mail.google.com/mail/?view=cm&fs=1&to=brilliantsyah.webdev@gmail.com&su=Quick%20Question">
-          <span data-i18n="contact.emailDirect">Email Langsung</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+  <p class="sec-label reveal">Kontak</p>
+  <h2 class="sec-title reveal">Mari kerja sama</h2>
+  <div class="ct-grid">
+    <div class="ct-info">
+      <h3 class="reveal">Punya proyek di kepala?</h3>
+      <p class="reveal">Ceritakan idenya &mdash; dari yang sederhana sampai yang kompleks. Aku balas dalam 24 jam, biasanya lebih cepat.</p>
+      <div class="ct-links">
+        <a href="https://wa.me/6285727794642" target="_blank" rel="noopener noreferrer" class="ct-link reveal">
+          <div class="ct-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 01-8.5 8.5 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 018.5-8.5h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
+          <div><div class="ct-lbl">WhatsApp</div><div class="ct-val">+62 857-2779-4642</div></div>
         </a>
-        <a class="hire-btn wa" target="_blank" rel="noopener noreferrer"
-           href="https://wa.me/6285727794642?text=Hi%20Brilliantsyah!%20Saya%20punya%20pertanyaan%20tentang%20layanan%20kamu.">
-          <span>Chat WhatsApp</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+        <a href="mailto:brilliantsyah.webdev@gmail.com" class="ct-link reveal">
+          <div class="ct-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="ct-lbl">Email</div><div class="ct-val">brilliantsyah.webdev@gmail.com</div></div>
+        </a>
+        <a href="https://github.com/Brilliantsyach" target="_blank" rel="noopener noreferrer" class="ct-link reveal">
+          <div class="ct-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
+          <div><div class="ct-lbl">GitHub</div><div class="ct-val">github.com/Brilliantsyach</div></div>
         </a>
       </div>
     </div>
+    <form class="cf reveal" id="cf" action="https://formspree.io/f/xpqjqbjz" method="POST" novalidate>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="Inquiry dari EL-Portfolio">
+      <div><label for="fn">Nama kamu</label><input type="text" id="fn" name="name" required autocomplete="name" placeholder="Budi Santoso"></div>
+      <div><label for="fe">Email kamu</label><input type="email" id="fe" name="email" required autocomplete="email" placeholder="budi@email.com"></div>
+      <div><label for="fm">Ceritakan proyekmu</label><textarea id="fm" name="message" rows="5" required placeholder="Contoh: butuh landing page untuk produk skincare, budget Rp400K, target selesai bulan depan..."></textarea></div>
+      <button type="submit" class="cf-btn" id="cfBtn">
+        Kirim Pesan
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+      <div class="cf-status" id="cfStatus" role="alert"></div>
+    </form>
   </div>
 </section>
 
-<!-- ============================================= -->
-<!-- FOOTER -->
-<!-- ============================================= -->
+</main>
+
 <footer>
-  <div class="footer-content">
-    <p data-i18n="footer.copy">© 2026 EL-Portfolio • Dibuat dengan ☕ & passion</p>
-    <div class="footer-links">
-      <a href="#home" data-i18n="nav.home">Beranda</a>
-      <a href="#about" data-i18n="nav.about">Tentang</a>
-      <a href="#projects" data-i18n="nav.projects">Proyek</a>
-      <a href="#contact" data-i18n="nav.contact">Kontak</a>
-    </div>
-  </div>
-  <div class="easter-egg">
-    <button id="konamiCode" style="opacity:0;position:absolute;">🎮</button>
+  <div class="f-copy">&copy; 2026 Brilliantsyah El-Huda &mdash; dibuat dengan HTML, CSS, dan banyak kopi</div>
+  <div class="f-links"><a href="#about">Tentang</a><a href="#services">Layanan</a><a href="#projects">Proyek</a><a href="#contact">Kontak</a></div>
+  <div class="f-soc">
+    <a href="https://github.com/Brilliantsyach" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+    <a href="https://www.instagram.com/Bryaant_el" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.linkedin.com/in/brilliantsyah-el" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
   </div>
 </footer>
 
-</div><!-- /.page -->
+<button id="btt" aria-label="Kembali ke atas"><svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg></button>
 
-<!-- Lightbox Modal -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
-  <div class="lightbox-content">
-    <img src="" alt="Enlarged project image" id="lightboxImg">
-  </div>
-</div>
-
-<!-- JavaScript Files -->
-<script src="js/particles.js" defer></script>
-<script src="js/cursor.js" defer></script>
-<script src="js/cursor-trail.js" defer></script>
-<script src="js/theme.js" defer></script>
-<script src="js/sound.js" defer></script>
-<script src="js/language.js" defer></script>
-<script src="js/menu.js" defer></script>
-<script src="js/scroll.js" defer></script>
-<script src="js/animations.js" defer></script>
-<script src="js/tilt.js" defer></script>
-<script src="js/testimonials.js" defer></script>
-<script src="js/contact-form.js" defer></script>
-<script src="js/faq.js" defer></script>
-<script src="js/easter-eggs.js" defer></script>
-<script src="js/loader.js" defer></script>
-
-
-
-<!-- Vercel Web Analytics -->
 <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+const P=document.getElementById('progress');
+window.addEventListener('scroll',()=>{const s=document.documentElement;P.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
+const dot=document.getElementById('cDot'),ring=document.getElementById('cRing');
+if(dot&&ring&&matchMedia('(hover:hover)').matches){
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.cssText='left:'+mx+'px;top:'+my+'px';},{passive:true});
+  (function l(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.cssText='left:'+rx+'px;top:'+ry+'px';requestAnimationFrame(l);})();
+}
+const ham=document.getElementById('ham'),mob=document.getElementById('mobNav');
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});
+mob.querySelectorAll('.mob-link').forEach(l=>l.addEventListener('click',()=>{mob.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';}));
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*55);io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -36px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.faq-q').forEach(b=>b.addEventListener('click',()=>{const it=b.closest('.faq-item');const o=it.classList.toggle('open');b.setAttribute('aria-expanded',o);}));
+const bt=document.getElementById('btt');
+window.addEventListener('scroll',()=>bt.classList.toggle('show',scrollY>500),{passive:true});
+bt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const cf=document.getElementById('cf'),cfs=document.getElementById('cfStatus'),cfb=document.getElementById('cfBtn');
+if(cf)cf.addEventListener('submit',async e=>{e.preventDefault();cfb.disabled=true;cfb.textContent='Mengirim...';cfs.style.display='none';try{const r=await fetch(cf.action,{method:'POST',body:new FormData(cf),headers:{Accept:'application/json'}});if(r.ok){cfs.textContent='Pesan terkirim! Aku balas dalam 24 jam.';cfs.className='cf-status cf-ok';cf.reset();}else throw 0;}catch{cfs.textContent='Gagal kirim. Hubungi langsung via WA atau Email ya!';cfs.className='cf-status cf-err';}cfs.style.display='block';cfb.disabled=false;cfb.innerHTML='Kirim Pesan <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';setTimeout(()=>cfs.style.display='none',7000);});
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}}));
 </script>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script>
-  
 </body>
 </html>
-
-
-
